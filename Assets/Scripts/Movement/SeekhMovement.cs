@@ -18,8 +18,8 @@ public class SeekhMovement : MonoBehaviour
         xRightBound = 1440 / 2;
         //xRightBound = Screen.width / 2;
 
-        //WIDTH OF LEVEL IS 2.2
-        widthOfLevel = 2.2f;
+        //WIDTH OF LEVEL IS 4.8
+        widthOfLevel = 4.8f;
     }
 
     // Update is called once per frame
