@@ -6,13 +6,20 @@ public class SeekhMovement : MonoBehaviour
 {
     float speed = 1;
     Touch touch;
+    float widthOfLevel;
     float xRightBound;
+    float touchPosX;
     float newPosX;
 
     // Start is called before the first frame update
     void Start()
     {
-        xRightBound = Screen.width / 2;
+        //FOR TESTING PURPOSE USE 1440 OTHERWISE USE SCREEN.WIDTH
+        xRightBound = 1440 / 2;
+        //xRightBound = Screen.width / 2;
+
+        //WIDTH OF LEVEL IS 2.2
+        widthOfLevel = 2.2f;
     }
 
     // Update is called once per frame
@@ -26,11 +33,10 @@ public class SeekhMovement : MonoBehaviour
 
             if(touch.phase == TouchPhase.Moved)
             {
-                newPosX = touch.position.x - xRightBound;
+                touchPosX = touch.position.x - xRightBound;
+                newPosX = (touchPosX * widthOfLevel) / xRightBound;
 
-                Debug.Log(newPosX);
-
-                //transform.position = new Vector3(newPosX, transform.position.y, transform.position.z);
+                transform.position = new Vector3(newPosX, transform.position.y, transform.position.z);
             }
         }
     }
