@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SeekhMovement : MonoBehaviour
 {
-    float speed = 1;
+    float speed = 5;
     Touch touch;
     float widthOfLevel;
     float xRightBound;
