@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SeekhInfo : MonoBehaviour
 {
+    public static SeekhInfo seekhInfoInstance;
     [SerializeField] int numberOfItems;
     List<GameObject> itemPlacesOnSeekh;
-    List<GameObject> itemsOnSeekh;
+    [SerializeField] List<GameObject> itemsOnSeekh;
     [SerializeField] Transform tipOfSeekh;
     [SerializeField] Transform baseOfSeekh;
     float length;
@@ -17,7 +18,7 @@ public class SeekhInfo : MonoBehaviour
         itemsOnSeekh = new List<GameObject>();
         itemPlacesOnSeekh = new List<GameObject>(numberOfItems);
         length = tipOfSeekh.localPosition.z - baseOfSeekh.localPosition.z;
-        initializePlacesOnSeekh();
+        //initializePlacesOnSeekh();
     }
 
     void initializePlacesOnSeekh()
@@ -31,8 +32,13 @@ public class SeekhInfo : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void addItemOnSeekh(GameObject item)
     {
-        
+        itemsOnSeekh.Add(item);
+    }
+
+    public int getNumberOfItemsOnSeekh()
+    {
+        return itemsOnSeekh.Count;
     }
 }
