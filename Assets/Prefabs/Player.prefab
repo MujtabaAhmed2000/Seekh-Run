@@ -90,8 +90,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.21404144, y: 0.2134322, z: 9.00205}
-  m_Center: {x: 0.000000059604645, y: -0.0031312555, z: 4.4883575}
+  m_Size: {x: 0.21404144, y: 0.2134322, z: 1.5313354}
+  m_Center: {x: 0.000000059604645, y: -0.0031312555, z: 8.223714}
 --- !u!114 &-6725787191350395172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfItems: 0
+  itemsOnSeekh: []
   tipOfSeekh: {fileID: 6516843724606182751}
   baseOfSeekh: {fileID: 1942644532455929861}
 --- !u!54 &-2390775377504923066
