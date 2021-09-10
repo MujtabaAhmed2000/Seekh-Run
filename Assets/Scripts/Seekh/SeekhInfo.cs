@@ -37,6 +37,11 @@ public class SeekhInfo : MonoBehaviour
         itemsOnSeekh.Add(item);
     }
 
+    public void RemoveItemOnSeekh(GameObject item)
+    {
+        itemsOnSeekh.Remove(item);
+    }
+
     public int getNumberOfItemsOnSeekh()
     {
         return itemsOnSeekh.Count;
