@@ -60,7 +60,6 @@ public class FoodCollect : MonoBehaviour
 
             transform.SetParent(other.gameObject.transform);
 
-            Debug.Log(seekhInfo.getNumberOfItemsOnSeekh());
             while (sub >= 2f)
             { 
                 if (seekhInfo.getNumberOfItemsOnSeekh() == i)
@@ -68,6 +67,8 @@ public class FoodCollect : MonoBehaviour
                     transform
                     .DOMoveZ(transform.position.z - sub, animDuration)
                     .SetEase(Ease.OutBounce);
+
+                    transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
                 }
                 sub--;
                 i++;
