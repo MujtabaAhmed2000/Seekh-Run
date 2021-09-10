@@ -68,9 +68,9 @@ public class FoodCollect : MonoBehaviour
                     transform
                     .DOMoveZ(transform.position.z - sub, animDuration)
                     .SetEase(Ease.OutBounce);
-                    sub--;
-                    i++;
                 }
+                sub--;
+                i++;
             }
         }
         //if(other.gameObject.tag == "ouch")
