@@ -12,9 +12,16 @@ public class SeekhCollision : MonoBehaviour
     {
         if(other.gameObject.tag == "Food")
         {
+            seekhInfo.addItemOnSeekh(other.gameObject);
+
             FoodCollect foodCollect = other.gameObject.GetComponent<FoodCollect>();
             foodCollect.attachToSkewer(zPositionOnSeekh, transform);
             zPositionOnSeekh -= gapBetweenItems;
+        }
+        
+        else if(other.gameObject.tag == "Wall")
+        {
+            seekhInfo.removeTopItemOnSeekh().SetActive(false);
         }
     }
 }

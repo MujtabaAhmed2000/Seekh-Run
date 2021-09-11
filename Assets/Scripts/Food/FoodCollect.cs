@@ -5,14 +5,17 @@ using DG.Tweening;
 
 public class FoodCollect : MonoBehaviour
 {
+    [SerializeField] FoodInfo foodInfo;
     float animDuration = 0.5f;
-    public float animDurationV2;
-    public Ease AnimEase;
-    float sub = 5f;
-    int i = 1;
+    //public float animDurationV2;
+    //public Ease AnimEase;
+    //float sub = 5f;
+    //int i = 1;
 
     public void attachToSkewer(float zOffset, Transform skewer)
     {
+        foodInfo.setIsPickedUp(true);
+
         transform.SetParent(skewer);
 
         transform
@@ -24,7 +27,7 @@ public class FoodCollect : MonoBehaviour
 
     public void detachFromSkewer()
     {
-
+        foodInfo.setIsPickedUp(false);
     }
 
     //private void OnTriggerEnter(Collider other)
@@ -67,8 +70,8 @@ public class FoodCollect : MonoBehaviour
 
     //}
 
-    private void OnTriggerEnter(Collider other)
-    {
+    //private void OnTriggerEnter(Collider other)
+    //{
         /*if (other.gameObject.tag == "Player")
         {
             SeekhInfo seekhInfo = other.gameObject.GetComponent<SeekhInfo>();
@@ -106,6 +109,6 @@ public class FoodCollect : MonoBehaviour
         //    sub++;
         //    i--;
         //}
-    }
+    //}
 
 }

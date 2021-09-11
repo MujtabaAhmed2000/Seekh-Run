@@ -6,6 +6,7 @@ public class FoodInfo : MonoBehaviour
 {
     bool isPickedUp = false;
     float speed;
+
     // Start is called before the first frame update
     void Start()
     {

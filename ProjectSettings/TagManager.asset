@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Skewer
   - Food
-  - ouch
+  - Ouch
+  - Wall
   layers:
   - Default
   - TransparentFX
