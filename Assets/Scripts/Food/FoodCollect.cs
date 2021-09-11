@@ -11,6 +11,22 @@ public class FoodCollect : MonoBehaviour
     float sub = 5f;
     int i = 1;
 
+    public void attachToSkewer(float zOffset, Transform skewer)
+    {
+        transform.SetParent(skewer);
+
+        transform
+        .DOMoveZ(transform.position.z - zOffset, animDuration)
+        .SetEase(Ease.OutBounce);
+
+        transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
+    }
+
+    public void detachFromSkewer()
+    {
+
+    }
+
     //private void OnTriggerEnter(Collider other)
     //{
     //    if (other.gameObject.tag == "Player")
@@ -53,7 +69,7 @@ public class FoodCollect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        /*if (other.gameObject.tag == "Player")
         {
             SeekhInfo seekhInfo = other.gameObject.GetComponent<SeekhInfo>();
             seekhInfo.addItemOnSeekh(gameObject);
@@ -73,7 +89,9 @@ public class FoodCollect : MonoBehaviour
                 sub--;
                 i++;
             }
-        }
+        }*/
+
+
         //if(other.gameObject.tag == "ouch")
         //{
         //    SeekhInfo seekhInfo = other.gameObject.GetComponent<SeekhInfo>();

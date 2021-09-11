@@ -5,23 +5,22 @@ using UnityEngine;
 public class SeekhInfo : MonoBehaviour
 {
     public static SeekhInfo seekhInfoInstance;
-    [SerializeField] int numberOfItems;
-    List<GameObject> itemPlacesOnSeekh;
+    //List<GameObject> itemPlacesOnSeekh;
     [SerializeField] List<GameObject> itemsOnSeekh;
-    [SerializeField] Transform tipOfSeekh;
-    [SerializeField] Transform baseOfSeekh;
+    //[SerializeField] Transform tipOfSeekh;
+    //[SerializeField] Transform baseOfSeekh;
     float length;
 
     // Start is called before the first frame update
     void Start()
     {
         itemsOnSeekh = new List<GameObject>();
-        itemPlacesOnSeekh = new List<GameObject>(numberOfItems);
-        length = tipOfSeekh.localPosition.z - baseOfSeekh.localPosition.z;
+        //itemPlacesOnSeekh = new List<GameObject>(numberOfItems);
+        //length = tipOfSeekh.localPosition.z - baseOfSeekh.localPosition.z;
         //initializePlacesOnSeekh();
     }
 
-    void initializePlacesOnSeekh()
+    /*void initializePlacesOnSeekh()
     {
         float space = length / numberOfItems;
         for(int i = 0; i < numberOfItems; i++)
@@ -30,7 +29,7 @@ public class SeekhInfo : MonoBehaviour
             itemPlacesOnSeekh[i].transform.SetParent(transform);
             itemPlacesOnSeekh[i].transform.localPosition = new Vector3(0, 0, transform.position.z + (space * i));
         }
-    }
+    }*/
 
     public void addItemOnSeekh(GameObject item)
     {
