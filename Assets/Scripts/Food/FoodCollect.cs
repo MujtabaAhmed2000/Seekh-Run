@@ -28,6 +28,7 @@ public class FoodCollect : MonoBehaviour
     public void detachFromSkewer()
     {
         foodInfo.setIsPickedUp(false);
+        transform.SetParent(null);
     }
 
     //private void OnTriggerEnter(Collider other)

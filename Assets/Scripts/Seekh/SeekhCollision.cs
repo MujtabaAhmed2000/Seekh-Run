@@ -14,14 +14,17 @@ public class SeekhCollision : MonoBehaviour
         {
             seekhInfo.addItemOnSeekh(other.gameObject);
 
-            FoodCollect foodCollect = other.gameObject.GetComponent<FoodCollect>();
-            foodCollect.attachToSkewer(zPositionOnSeekh, transform);
+            other.gameObject.GetComponent<FoodCollect>().attachToSkewer(zPositionOnSeekh, transform);
             zPositionOnSeekh -= gapBetweenItems;
         }
         
         else if(other.gameObject.tag == "Wall")
         {
-            seekhInfo.removeTopItemOnSeekh().SetActive(false);
+            GameObject item = seekhInfo.removeTopItemOnSeekh();
+            item.GetComponent<FoodCollect>().detachFromSkewer();
+            item.GetComponent<FoodInfo>().flingItemUp(); 
+
+            zPositionOnSeekh += gapBetweenItems;
         }
     }
 }

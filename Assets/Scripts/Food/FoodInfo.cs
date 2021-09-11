@@ -4,23 +4,42 @@ using UnityEngine;
 
 public class FoodInfo : MonoBehaviour
 {
+    Rigidbody rigidbody;
     bool isPickedUp = false;
+    bool isFlung = false;
     float speed;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!isPickedUp)
+        {
+            //ADD CODE FOR ANIMATION
+        }
+        else if (isPickedUp)
+        {
+            //ADD CODE FOR ANIMATION
+        }
+        else if (isFlung)
+        {
+            //ADD CODE FOR ANIMATION AND TIMER TO SET ACTIVE FALSE
+        }
     }
 
     public void setIsPickedUp(bool value)
     {
         isPickedUp = value;
+    }
+
+    public void flingItemUp()
+    {
+        isFlung = true;
+        rigidbody.useGravity = true;
+        rigidbody.AddForce(new Vector3(0, 5f, 0), ForceMode.Impulse);
     }
 }
