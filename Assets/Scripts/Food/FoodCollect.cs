@@ -6,12 +6,12 @@ using DG.Tweening;
 public class FoodCollect : MonoBehaviour
 {
     FoodInfo foodInfo;
-    float animDuration = 0.5f;
+    public float animDuration = 0.25f;
 
     [SerializeField] private AudioSource FoodPickUp;
     public AudioClip Pick;
     public AudioClip Drop;
-    //public ParticleSystem shatter;
+    public ParticleSystem shatter;
     //public float animDurationV2;
     //public Ease AnimEase;
     //float sub = 5f;
@@ -36,6 +36,10 @@ public class FoodCollect : MonoBehaviour
         FoodPickUp.clip = Pick;
         FoodPickUp.PlayOneShot(FoodPickUp.clip);
 
+        var main = shatter.gameObject.GetComponent<ParticleSystem>().main;
+        main.startColor = GetComponent<MeshRenderer>().material.color;
+        shatter.Play();
+
         transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
     }
 
@@ -44,6 +48,8 @@ public class FoodCollect : MonoBehaviour
         //adding particle effect and sound
         FoodPickUp.clip = Drop;
         FoodPickUp.PlayOneShot(FoodPickUp.clip);
+        //var main = shatter.gameObject.GetComponent<ParticleSystem>().main;
+        //main.startColor = GetComponent<MeshRenderer>().material.color;
         //shatter.Play();
         foodInfo.setIsPickedUp(false);
         transform.SetParent(null);

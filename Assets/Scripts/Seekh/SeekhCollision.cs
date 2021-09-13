@@ -5,7 +5,7 @@ using UnityEngine;
 public class SeekhCollision : MonoBehaviour
 {
     [SerializeField] SeekhInfo seekhInfo;
-    float zPositionOnSeekh = 5f;
+    float zPositionOnSeekh = 3f;
     float gapBetweenItems = 1f;
 
     private void OnTriggerEnter(Collider other)
