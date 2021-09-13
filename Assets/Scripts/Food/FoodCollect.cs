@@ -5,17 +5,23 @@ using DG.Tweening;
 
 public class FoodCollect : MonoBehaviour
 {
-    [SerializeField] FoodInfo foodInfo;
+    FoodInfo foodInfo;
     float animDuration = 0.5f;
 
     [SerializeField] private AudioSource FoodPickUp;
     public AudioClip Pick;
     public AudioClip Drop;
+    //public ParticleSystem shatter;
     //public float animDurationV2;
     //public Ease AnimEase;
     //float sub = 5f;
     //int i = 1;
 
+
+    private void Start()
+    {
+        foodInfo = GetComponent<FoodInfo>();
+    }
     public void attachToSkewer(float zOffset, Transform skewer)
     {
         foodInfo.setIsPickedUp(true);
@@ -38,7 +44,7 @@ public class FoodCollect : MonoBehaviour
         //adding particle effect and sound
         FoodPickUp.clip = Drop;
         FoodPickUp.PlayOneShot(FoodPickUp.clip);
-
+        //shatter.Play();
         foodInfo.setIsPickedUp(false);
         transform.SetParent(null);
     }
