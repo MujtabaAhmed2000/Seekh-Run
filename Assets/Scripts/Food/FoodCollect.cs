@@ -7,6 +7,10 @@ public class FoodCollect : MonoBehaviour
 {
     [SerializeField] FoodInfo foodInfo;
     float animDuration = 0.5f;
+
+    [SerializeField] private AudioSource FoodPickUp;
+    public AudioClip Pick;
+    public AudioClip Drop;
     //public float animDurationV2;
     //public Ease AnimEase;
     //float sub = 5f;
@@ -22,11 +26,19 @@ public class FoodCollect : MonoBehaviour
         .DOMoveZ(transform.position.z - zOffset, animDuration)
         .SetEase(Ease.OutBounce);
 
+        //adding particle effect and sound
+        FoodPickUp.clip = Pick;
+        FoodPickUp.PlayOneShot(FoodPickUp.clip);
+
         transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
     }
 
     public void detachFromSkewer()
     {
+        //adding particle effect and sound
+        FoodPickUp.clip = Drop;
+        FoodPickUp.PlayOneShot(FoodPickUp.clip);
+
         foodInfo.setIsPickedUp(false);
         transform.SetParent(null);
     }

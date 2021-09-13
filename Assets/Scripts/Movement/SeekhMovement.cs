@@ -11,8 +11,8 @@ public class SeekhMovement : MonoBehaviour
     float xRightBound;
     float touchPosX;
     float newPosX;
-    public float degree;
-    public float animDuration;
+    //public float degree;
+    //public float animDuration;
 
     // Start is called before the first frame update
     void Start()
