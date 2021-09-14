@@ -23,6 +23,8 @@ public class SeekhMovement : MonoBehaviour
 
         //WIDTH OF LEVEL IS 4.8
         widthOfLevel = 4.8f;
+
+        //transform.DORotate(new Vector3(0, 90, 0), 2f);
     }
 
     // Update is called once per frame
@@ -41,8 +43,7 @@ public class SeekhMovement : MonoBehaviour
 
                 transform.position = new Vector3(newPosX, transform.position.y, transform.position.z);
                 //new code starts here
-                
-                
+
                 //if(transform.position.x > xRightBound)
                 //{
                 //    LeanTween.rotateY(gameObject, degree, animDuration);
