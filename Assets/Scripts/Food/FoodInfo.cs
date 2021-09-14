@@ -38,8 +38,9 @@ public class FoodInfo : MonoBehaviour
 
     public void flingItemUp()
     {
+        float randomX = Random.Range(-3, 3);
         isFlung = true;
         rigidbody.useGravity = true;
-        rigidbody.AddForce(new Vector3(0, 5f, 0), ForceMode.Impulse);
+        rigidbody.AddForce(new Vector3(randomX, 5f, 0), ForceMode.Impulse);
     }
 }
