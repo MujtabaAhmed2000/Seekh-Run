@@ -12,13 +12,6 @@ public class SeekhRotation : MonoBehaviour
     //THIS IS THE HIGHEST DELTA I COULD GET BY SWIMPING THE SCREEN REALLY FAST. THIS VALUE CORRESPONDS TO THE touch.deltaPosition
     float maxDelta = 100;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //transform.DORotate(new Vector3(0, 90, 0), 5f);
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(Input.touchCount > 0)
@@ -33,13 +26,13 @@ public class SeekhRotation : MonoBehaviour
                 if(touch.deltaPosition.x < -touchMargin)
                 {
                     float angle = (-maxRightAngle * touch.deltaPosition.x) / -maxDelta;
-                    Debug.Log(angle);
+                    //Debug.Log(angle);
                     rotateLeft(angle * 10);
                 }
                 else if(touch.deltaPosition.x > touchMargin)
                 {
                     float angle = (maxRightAngle * touch.deltaPosition.x) / maxDelta;
-                    Debug.Log(angle);
+                    //Debug.Log(angle);
                     rotateRight(angle * 10);
                 }
                 else
@@ -53,17 +46,17 @@ public class SeekhRotation : MonoBehaviour
 
     void rotateLeft(float angle)
     {
-        transform.DORotate(new Vector3(0, angle, 0), 2f);
+        transform.DORotate(new Vector3(0, angle, 0), 1f);
     }
 
     void rotateRight(float angle)
     {
-        transform.DORotate(new Vector3(0, angle, 0), 2f);
+        transform.DORotate(new Vector3(0, angle, 0), 1f);
     }
 
     void rotateReset()
     {
         //Debug.Log("RESET");
-        transform.DORotate(new Vector3(0, 0, 0), 2f);
+        transform.DORotate(new Vector3(0, 0, 0), 0.5f);
     }
 }
