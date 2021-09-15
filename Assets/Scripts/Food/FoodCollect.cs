@@ -32,12 +32,13 @@ public class FoodCollect : MonoBehaviour
         .DOMoveZ(transform.position.z - zOffset, animDuration)
         .SetEase(Ease.OutBounce);
 
+        GetComponent<Animation>().Stop();
         //adding particle effect and sound
         FoodPickUp.clip = Pick;
         FoodPickUp.PlayOneShot(FoodPickUp.clip);
 
-        var main = shatter.gameObject.GetComponent<ParticleSystem>().main;
-        main.startColor = GetComponent<MeshRenderer>().material.color;
+        //var main = shatter.gameObject.GetComponent<ParticleSystem>().main;
+        //main.startColor = GetComponent<MeshRenderer>().material.color;
         shatter.Play();
 
         transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
@@ -51,6 +52,7 @@ public class FoodCollect : MonoBehaviour
         //var main = shatter.gameObject.GetComponent<ParticleSystem>().main;
         //main.startColor = GetComponent<MeshRenderer>().material.color;
         //shatter.Play();
+
         foodInfo.setIsPickedUp(false);
         transform.SetParent(null);
     }
