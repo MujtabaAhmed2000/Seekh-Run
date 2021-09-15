@@ -31,11 +31,18 @@ public class FoodCollect : MonoBehaviour
 
         transform.SetParent(skewer);
 
+
+        //transform
+        //.DOMoveZ(skewer.position.z - zOffset, animDuration)
+        //.SetEase(Ease.OutBounce);
+
         transform.DOMove(skewer.position, animDuration).SetEase(Ease.OutBounce);
 
         //TO MAKE SURE IT ALIGNS EXACTLY ONTO THE POISITION
-        transform.localPosition = new Vector3(0, 0, 0);
-        transform.localEulerAngles = new Vector3(0, 0, 0);
+        Invoke("alignItem", animDuration + 0.1f);
+
+        //transform.localPosition = new Vector3(0, 0, 0);
+        //transform.localEulerAngles = new Vector3(0, 0, 0);
     }
 
     public void detachFromSkewer()
@@ -48,5 +55,11 @@ public class FoodCollect : MonoBehaviour
         //shatter.Play();
         foodInfo.setIsPickedUp(false);
         transform.SetParent(null);
+    }
+
+    void alignItem()
+    {
+        transform.localPosition = new Vector3(0, 0, 0);
+        transform.localEulerAngles = new Vector3(0, 0, 0);
     }
 }
