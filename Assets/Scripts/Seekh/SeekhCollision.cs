@@ -5,6 +5,7 @@ using UnityEngine;
 public class SeekhCollision : MonoBehaviour
 {
     [SerializeField] SeekhInfo seekhInfo;
+    [SerializeField] List<GameObject> itemPositions;
     float zPositionOnSeekh = 3f;
     float gapBetweenItems = 1f;
 
@@ -12,9 +13,13 @@ public class SeekhCollision : MonoBehaviour
     {
         if(other.gameObject.tag == "Food")
         {
+            int position = seekhInfo.getNumberOfItemsOnSeekh();
+
             seekhInfo.addItemOnSeekh(other.gameObject);
 
-            other.gameObject.GetComponent<FoodCollect>().attachToSkewer(zPositionOnSeekh, transform);
+            //other.gameObject.GetComponent<FoodCollect>().attachToSkewer(zPositionOnSeekh, transform);
+            other.gameObject.GetComponent<FoodCollect>().attachToSkewer(zPositionOnSeekh, itemPositions[position].transform);
+
             zPositionOnSeekh -= gapBetweenItems;
         }
         
