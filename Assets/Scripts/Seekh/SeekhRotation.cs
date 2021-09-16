@@ -14,6 +14,8 @@ public class SeekhRotation : MonoBehaviour
 
     void Update()
     {
+        rotateReset();
+
         if(Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);
@@ -41,10 +43,6 @@ public class SeekhRotation : MonoBehaviour
                 }
 
             }
-            else if(touch.phase == TouchPhase.Ended)
-            {
-                rotateReset();
-            }
         }
     }
 
@@ -60,7 +58,6 @@ public class SeekhRotation : MonoBehaviour
 
     void rotateReset()
     {
-        //Debug.Log("RESET");
         transform.DORotate(new Vector3(0, 0, 0), 0.25f);
     }
 }
