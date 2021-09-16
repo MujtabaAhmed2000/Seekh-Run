@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: path
-  m_Shader: {fileID: 4800000, guid: 44b54c59129572f469a949a22bc08cd0, type: 3}
+  m_Name: Wall
+  m_Shader: {fileID: 4800000, guid: 76374158b4c4e5744b394e9290aae693, type: 3}
   m_ShaderKeywords: _TEX_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,8 +20,8 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a701430465e276f4e8c08b6364656960, type: 3}
-        m_Scale: {x: 1, y: 25}
+        m_Texture: {fileID: 2800000, guid: c553a74525a4d1f4dadbe682fb838a5f, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ToonShade:
         m_Texture: {fileID: 0}
@@ -30,10 +30,10 @@ Material:
     m_Floats:
     - _Brightness: 1
     - _DetailTex: 1
-    - _Outline: 1
+    - _Outline: 0.01
     - _TintColor: 0
     - _VertexColor: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_BuildTextureStacks: []
