@@ -27,19 +27,23 @@ public class SeekhRotation : MonoBehaviour
                 {
                     float angle = (-maxRightAngle * touch.deltaPosition.x) / -maxDelta;
                     //Debug.Log(angle);
-                    rotateLeft(angle * 10);
+                    rotateLeft(angle);
                 }
                 else if(touch.deltaPosition.x > touchMargin)
                 {
                     float angle = (maxRightAngle * touch.deltaPosition.x) / maxDelta;
                     //Debug.Log(angle);
-                    rotateRight(angle * 10);
+                    rotateRight(angle);
                 }
                 else
                 {
                     rotateReset();
                 }
 
+            }
+            else if(touch.phase == TouchPhase.Ended)
+            {
+                rotateReset();
             }
         }
     }
@@ -57,6 +61,6 @@ public class SeekhRotation : MonoBehaviour
     void rotateReset()
     {
         //Debug.Log("RESET");
-        transform.DORotate(new Vector3(0, 0, 0), 0.5f);
+        transform.DORotate(new Vector3(0, 0, 0), 0.25f);
     }
 }
