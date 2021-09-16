@@ -6,7 +6,7 @@ public class SeekhCollision : MonoBehaviour
 {
     [SerializeField] SeekhInfo seekhInfo;
     float zPositionOnSeekh = 3f;
-    float gapBetweenItems = 1f;
+    float gapBetweenItems = 1.5f;
 
     private void OnTriggerEnter(Collider other)
     {
