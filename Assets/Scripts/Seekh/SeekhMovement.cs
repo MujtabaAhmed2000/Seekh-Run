@@ -19,7 +19,7 @@ public class SeekhMovement : MonoBehaviour
         xRightBound = Screen.width / 2;
 
         //WIDTH OF LEVEL IS 4.8
-        widthOfLevel = 4.8f;
+        widthOfLevel = 4.5f;
     }
 
     // Update is called once per frame
@@ -36,7 +36,12 @@ public class SeekhMovement : MonoBehaviour
                 touchPosX = touch.position.x - xRightBound;
                 newPosX = (touchPosX * widthOfLevel) / xRightBound;
 
-                transform.position = new Vector3(newPosX, transform.position.y, transform.position.z);
+                //transform.position = new Vector3(newPosX, transform.position.y, transform.position.z);
+
+                //float moveX = (touch.deltaPosition.x % widthOfLevel) / (Screen.width / 4);
+                float moveX = (touch.deltaPosition.x / Screen.width) * 20;
+                Debug.Log(moveX);
+                transform.Translate(new Vector3(moveX * Time.deltaTime * 10, 0, 0));
             }
         }
     }
