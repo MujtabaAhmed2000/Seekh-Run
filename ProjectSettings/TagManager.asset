@@ -8,6 +8,8 @@ TagManager:
   - Food
   - Ouch
   - Wall
+  - LeftWall
+  - RightWall
   layers:
   - Default
   - TransparentFX
