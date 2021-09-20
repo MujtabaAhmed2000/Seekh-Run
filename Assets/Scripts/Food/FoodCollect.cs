@@ -32,6 +32,8 @@ public class FoodCollect : MonoBehaviour
         FoodPickUp.clip = Pick;
         FoodPickUp.PlayOneShot(FoodPickUp.clip);
 
+        GetComponent<Animation>().Stop();
+
         //var main = shatter.gameObject.GetComponent<ParticleSystem>().main;
         //main.startColor = GetComponent<MeshRenderer>().material.color;
         shatter.Play();
