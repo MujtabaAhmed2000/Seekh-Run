@@ -15,7 +15,7 @@ public class Destruction : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Skewer")
         {
             Instantiate(DestroyedWall, transform.position, transform.rotation);
             Vector3 explosionPos = transform.position;
