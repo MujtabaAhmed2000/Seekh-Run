@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: -6725787191350395172}
   - component: {fileID: 542113197603206674}
   - component: {fileID: 3474434720787491549}
+  - component: {fileID: 3225570941909622358}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -208,10 +209,22 @@ BoxCollider:
   m_GameObject: {fileID: 6807816903453792721}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.49094433, y: 0.38913286, z: 9.240238}
-  m_Center: {x: -0.016968459, y: 0.000000059604645, z: 7.4607563}
+  m_Size: {x: 0.3012994, y: 0.26203856, z: 6.8889933}
+  m_Center: {x: 0.0049136654, y: 0.000000074505806, z: -0.48263693}
+--- !u!114 &3225570941909622358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6807816903453792721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8285631b8cf0ce4fbb0020b6a804b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7406967882068626217
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,8 +367,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.26, y: 0.24, z: 1.6099997}
-  m_Center: {x: 0, y: 0, z: 5.72}
+  m_Size: {x: 0.26, y: 0.24, z: 2.2518744}
+  m_Center: {x: 0, y: 0, z: 6.0409374}
 --- !u!114 &1805535165385464911
 MonoBehaviour:
   m_ObjectHideFlags: 0

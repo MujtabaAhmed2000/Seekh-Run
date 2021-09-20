@@ -27,7 +27,6 @@ public class Destruction : MonoBehaviour
                 if (rb != null)
                 {
                     rb.AddExplosionForce(power, explosionPos, radius, 10.0F);
-                    Debug.LogError("working");
                 }
             }
             Destroy(gameObject);
