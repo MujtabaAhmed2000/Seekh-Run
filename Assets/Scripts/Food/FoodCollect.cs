@@ -23,6 +23,7 @@ public class FoodCollect : MonoBehaviour
         foodInfo = GetComponent<FoodInfo>();
         shatter = GetComponent<ParticleSystem>();
         FoodPickUp = GetComponent<AudioSource>();
+        
     }
     public void attachToSkewer(float zOffset, Transform skewer)
     {
@@ -31,9 +32,9 @@ public class FoodCollect : MonoBehaviour
         //adding particle effect and sound
         FoodPickUp.clip = Pick;
         FoodPickUp.PlayOneShot(FoodPickUp.clip);
-
         GetComponent<Animation>().Stop();
-
+        transform.DOScale(10f, 0.25f);
+    
         //var main = shatter.gameObject.GetComponent<ParticleSystem>().main;
         //main.startColor = GetComponent<MeshRenderer>().material.color;
         shatter.Play();
@@ -61,7 +62,7 @@ public class FoodCollect : MonoBehaviour
         FoodPickUp.PlayOneShot(FoodPickUp.clip);
         //var main = shatter.gameObject.GetComponent<ParticleSystem>().main;
         //main.startColor = GetComponent<MeshRenderer>().material.color;
-        //shatter.Play();
+        shatter.Play();
         
         foodInfo.setIsPickedUp(false);
         transform.SetParent(null);
