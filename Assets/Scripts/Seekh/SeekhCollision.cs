@@ -32,12 +32,4 @@ public class SeekhCollision : MonoBehaviour
             zPositionOnSeekh += gapBetweenItems;
         }
     }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if(other.gameObject.tag == "Stove")
-        {
-            //Debug.Log("INSIDE STOVE");
-        }
-    }
 }
