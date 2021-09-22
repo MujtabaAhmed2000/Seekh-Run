@@ -6,7 +6,7 @@ using DG.Tweening;
 public class FoodCollect : MonoBehaviour
 {
     FoodInfo foodInfo;
-    float animDuration = 0.01f; //WAS 0.25f
+    float animDuration = 0.15f; //WAS 0.25f
 
     [SerializeField] private AudioSource FoodPickUp;
     public AudioClip Pick;
@@ -45,10 +45,13 @@ public class FoodCollect : MonoBehaviour
         //.DOMoveZ(skewer.position.z - zOffset, animDuration)
         //.SetEase(Ease.OutBounce);
 
-        transform.DOMove(skewer.position, animDuration).SetEase(Ease.OutBounce);
+        Vector3 offset = new Vector3(0, 0, 2.5f);
+
+        transform.DOMove(skewer.position + offset , animDuration).SetEase(Ease.OutBounce);
 
         //TO MAKE SURE IT ALIGNS EXACTLY ONTO THE POISITION
         Invoke("alignItem", animDuration + 0.1f);
+        
         transform.DOShakeScale(1f);
 
         //transform.localPosition = new Vector3(0, 0, 0);
