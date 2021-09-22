@@ -1352,6 +1352,7 @@ GameObject:
   - component: {fileID: 5204603748654282960}
   - component: {fileID: 5204603748654282963}
   - component: {fileID: 5204603748654282962}
+  - component: {fileID: 4729511127788618689}
   m_Layer: 0
   m_Name: Cheese
   m_TagString: Food
@@ -6633,3 +6634,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!54 &4729511127788618689
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5204603748654282966}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
