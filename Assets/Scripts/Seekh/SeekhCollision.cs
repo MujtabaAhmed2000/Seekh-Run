@@ -34,5 +34,11 @@ public class SeekhCollision : MonoBehaviour
 
             zPositionOnSeekh += gapBetweenItems;
         }
+
+        else if(other.gameObject.tag == "Finish")
+        {
+            Debug.Log("FINISHED");
+            seekhMovement.setIsControl(false);
+        }
     }
 }
