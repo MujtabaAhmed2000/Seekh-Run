@@ -8,7 +8,6 @@ public class WallBang : MonoBehaviour
 
     private void Start()
     {
-
         shatter = GetComponent<ParticleSystem>();
     }
     private void OnTriggerEnter(Collider other)

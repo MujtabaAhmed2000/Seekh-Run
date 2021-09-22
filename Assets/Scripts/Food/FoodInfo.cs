@@ -9,6 +9,7 @@ public class FoodInfo : MonoBehaviour
     bool isPickedUp = false;
     bool isFlung = false;
     float scaleDuration = 0.5f;
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();

@@ -6,7 +6,6 @@ public class StoveInfo : MonoBehaviour
 {
     [SerializeField] float flameDuration;
     [SerializeField] float offDuration;
-    bool enableCollider = false;
     BoxCollider collider;
     [SerializeField] List<ParticleSystem> flameThrowers;
     // Start is called before the first frame update
@@ -14,12 +13,6 @@ public class StoveInfo : MonoBehaviour
     {
         collider = GetComponent<BoxCollider>();
         Invoke("startFlame", offDuration);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void startFlame()
