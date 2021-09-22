@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - LeftWall
   - RightWall
+  - Stove
   layers:
   - Default
   - TransparentFX

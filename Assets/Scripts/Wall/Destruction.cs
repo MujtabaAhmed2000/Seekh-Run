@@ -7,12 +7,6 @@ public class Destruction : MonoBehaviour
     public GameObject DestroyedWall;
     public float radius = 10.0F;
     public float power = 20.0F;
-
-    void Start()
-    {
-        
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Skewer")
