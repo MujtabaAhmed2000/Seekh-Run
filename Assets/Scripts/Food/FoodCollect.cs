@@ -32,7 +32,7 @@ public class FoodCollect : MonoBehaviour
         //adding particle effect and sound
         FoodPickUp.clip = Pick;
         FoodPickUp.PlayOneShot(FoodPickUp.clip);
-        GetComponent<Animation>().Stop();
+        //GetComponent<Animation>().Stop();
 
 
         //var main = shatter.gameObject.GetComponent<ParticleSystem>().main;
