@@ -23,7 +23,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4429483050205140001
 Transform:
   m_ObjectHideFlags: 0
@@ -5411,7 +5411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CollisionMaterial: {fileID: 0}
-  solverIndices: 
+  solverIndices: 00000000
   m_SoftbodyBlueprint: {fileID: 11400000, guid: 491469da6ba5f3042b75356a9052c028,
     type: 2}
   m_SelfCollisions: 0

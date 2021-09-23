@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &459109947585838378
+--- !u!1 &2539716345138673500
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 459109947585838381}
-  - component: {fileID: 459109947585838382}
-  - component: {fileID: 459109947585838383}
-  - component: {fileID: 459109947585838380}
+  - component: {fileID: 2539716345138673491}
+  - component: {fileID: 2539716345138673488}
+  - component: {fileID: 2539716345138673489}
+  - component: {fileID: 2539716345138673490}
   m_Layer: 0
-  m_Name: Mushroom Softbody
+  m_Name: Muffin Softbody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &459109947585838381
+--- !u!4 &2539716345138673491
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109947585838378}
+  m_GameObject: {fileID: 2539716345138673500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 12}
   m_Children: []
-  m_Father: {fileID: 459109948910359190}
+  m_Father: {fileID: 2539716345278957958}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &459109947585838382
+--- !u!137 &2539716345138673488
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109947585838378}
+  m_GameObject: {fileID: 2539716345138673500}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -77,7 +77,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300000, guid: f146753048df47a489d094c6e46d0a00, type: 3}
+  m_Mesh: {fileID: 4300000, guid: f2fa079d2ae9ea34c8c51bb4a4342e49, type: 3}
   m_Bones: []
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
@@ -85,21 +85,21 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_DirtyAABB: 0
---- !u!114 &459109947585838383
+--- !u!114 &2539716345138673489
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109947585838378}
+  m_GameObject: {fileID: 2539716345138673500}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f34e5650326d42f48ed54336d58073d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_CollisionMaterial: {fileID: 0}
-  solverIndices: 
-  m_SoftbodyBlueprint: {fileID: 11400000, guid: 228ad77036ab08e4487623ed9e3321ff,
+  solverIndices: 00000000
+  m_SoftbodyBlueprint: {fileID: 11400000, guid: 8fc3c1a2d5d37fd4d9b0fa61ad66b3b1,
     type: 2}
   m_SelfCollisions: 0
   centerBatch: -1
@@ -110,13 +110,13 @@ MonoBehaviour:
   _plasticYield: 0
   _plasticCreep: 0
   _plasticRecovery: 0
---- !u!114 &459109947585838380
+--- !u!114 &2539716345138673490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109947585838378}
+  m_GameObject: {fileID: 2539716345138673500}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83bf94c6a4abf4495a5a12f7f2f234ba, type: 3}
@@ -125,18 +125,18 @@ MonoBehaviour:
   m_SkinningFalloff: 1
   m_SkinningMaxDistance: 0.5
   m_Bindposes:
-  - e00: 1.0745435
-    e01: 11.943905
-    e02: -0.43414688
-    e03: -0.029697264
-    e10: 11.899376
-    e11: -1.0283445
-    e12: 1.1607423
-    e13: 0.24297382
-    e20: 1.1181117
-    e21: -0.5344453
-    e22: -11.935836
-    e23: 0.024436425
+  - e00: -11.416161
+    e01: -3.669287
+    e02: 0.45567146
+    e03: 0.23948517
+    e10: -3.6863022
+    e11: 11.180044
+    e12: -2.3276167
+    e13: 0.17661259
+    e20: 0.28718874
+    e21: -2.3543487
+    e22: -11.763271
+    e23: -0.02969823
     e30: 0
     e31: 0
     e32: 0
@@ -166,62 +166,6 @@ MonoBehaviour:
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 0
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: -1
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
   - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
@@ -243,62 +187,6 @@ MonoBehaviour:
     m_Weight2: 0
     m_Weight3: 0
     m_BoneIndex0: -1
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 0
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: -1
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
@@ -374,11 +262,11 @@ MonoBehaviour:
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
@@ -398,11 +286,11 @@ MonoBehaviour:
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
@@ -414,35 +302,19 @@ MonoBehaviour:
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
@@ -534,22 +406,6 @@ MonoBehaviour:
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
   - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
@@ -558,59 +414,11 @@ MonoBehaviour:
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
@@ -630,11 +438,11 @@ MonoBehaviour:
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
@@ -646,35 +454,67 @@ MonoBehaviour:
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
+    m_BoneIndex1: -1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0
+    m_Weight1: 0
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: -1
+    m_BoneIndex1: -1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0
+    m_Weight1: 0
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: -1
+    m_BoneIndex1: -1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0
+    m_Weight1: 0
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: -1
+    m_BoneIndex1: -1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0
+    m_Weight1: 0
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
@@ -734,43 +574,11 @@ MonoBehaviour:
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
@@ -838,30 +646,6 @@ MonoBehaviour:
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 0
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: -1
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 0
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: -1
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
-  - m_Weight0: 1
-    m_Weight1: 0
-    m_Weight2: 0
-    m_Weight3: 0
-    m_BoneIndex0: 0
-    m_BoneIndex1: -1
-    m_BoneIndex2: -1
-    m_BoneIndex3: -1
   - m_Weight0: 1
     m_Weight1: 0
     m_Weight2: 0
@@ -886,75 +670,91 @@ MonoBehaviour:
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
-  - m_Weight0: 1
+  - m_Weight0: 0
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
-    m_BoneIndex0: 0
+    m_BoneIndex0: -1
+    m_BoneIndex1: -1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0
+    m_Weight1: 0
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: -1
+    m_BoneIndex1: -1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0
+    m_Weight1: 0
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
@@ -982,11 +782,35 @@ MonoBehaviour:
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
+  - m_Weight0: 0
+    m_Weight1: 0
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: -1
+    m_BoneIndex1: -1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
   - m_Weight0: 1
     m_Weight1: 0
     m_Weight2: 0
     m_Weight3: 0
     m_BoneIndex0: 0
+    m_BoneIndex1: -1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0
+    m_Weight1: 0
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: -1
+    m_BoneIndex1: -1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0
+    m_Weight1: 0
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: -1
     m_BoneIndex1: -1
     m_BoneIndex2: -1
     m_BoneIndex3: -1
@@ -1079,8 +903,8 @@ MonoBehaviour:
     m_BoneIndex2: -1
     m_BoneIndex3: -1
   m_Bound: 1
-  m_Source: {fileID: 459109947585838383}
---- !u!1 &459109948910359183
+  m_Source: {fileID: 2539716345138673489}
+--- !u!1 &2539716345278957967
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1088,44 +912,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 459109948910359190}
-  - component: {fileID: 459109948910359191}
-  - component: {fileID: 459109948910359188}
-  - component: {fileID: 459109948910359189}
-  - component: {fileID: 459109948910359186}
-  - component: {fileID: 459109948910359187}
-  - component: {fileID: 459109948910359184}
-  - component: {fileID: 459109948910359185}
-  - component: {fileID: 459109948910359182}
+  - component: {fileID: 2539716345278957958}
+  - component: {fileID: 2539716345278957959}
+  - component: {fileID: 2539716345278957952}
+  - component: {fileID: 2539716345278957953}
+  - component: {fileID: 2539716345278957954}
+  - component: {fileID: 2539716345278957955}
+  - component: {fileID: 2539716345278957964}
+  - component: {fileID: 2539716345278957965}
+  - component: {fileID: 2539716345278957966}
   m_Layer: 0
-  m_Name: Mushroom
+  m_Name: Muffin
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &459109948910359190
+  m_IsActive: 1
+--- !u!4 &2539716345278957958
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109948910359183}
+  m_GameObject: {fileID: 2539716345278957967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 32.1}
+  m_LocalPosition: {x: 0, y: 2, z: 47.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 459109947585838381}
+  - {fileID: 2539716345138673491}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &459109948910359191
+--- !u!114 &2539716345278957959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109948910359183}
+  m_GameObject: {fileID: 2539716345278957967}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d174fab52f0c4b8399f25d5c3ea524c, type: 3}
@@ -1135,8 +959,8 @@ MonoBehaviour:
   parameters:
     mode: 0
     interpolation: 0
-    gravity: {x: 0, y: 0, z: 0}
-    damping: 1
+    gravity: {x: 0, y: -9.81, z: 0}
+    damping: 0
     shockPropagation: 0
     maxAnisotropy: 3
     maxDepenetration: 5
@@ -1480,26 +1304,26 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
---- !u!65 &459109948910359188
+--- !u!65 &2539716345278957952
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109948910359183}
+  m_GameObject: {fileID: 2539716345278957967}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &459109948910359189
+--- !u!54 &2539716345278957953
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109948910359183}
+  m_GameObject: {fileID: 2539716345278957967}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1509,13 +1333,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &459109948910359186
+--- !u!114 &2539716345278957954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109948910359183}
+  m_GameObject: {fileID: 2539716345278957967}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c71e1e7997c5be34eb9eaff5798472a4, type: 3}
@@ -1524,25 +1348,25 @@ MonoBehaviour:
   Pick: {fileID: 8300000, guid: f217be20648431e47b7ed72a7583c3a2, type: 3}
   Drop: {fileID: 8300000, guid: 0207fe2d7a325604983ac2b46aff6438, type: 3}
   shatter: {fileID: 0}
---- !u!114 &459109948910359187
+--- !u!114 &2539716345278957955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109948910359183}
+  m_GameObject: {fileID: 2539716345278957967}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6841f5a5825287c429f7cab7686074f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &459109948910359184
+--- !u!82 &2539716345278957964
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109948910359183}
+  m_GameObject: {fileID: 2539716345278957967}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -1632,13 +1456,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!198 &459109948910359185
+--- !u!198 &2539716345278957965
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109948910359183}
+  m_GameObject: {fileID: 2539716345278957967}
   serializedVersion: 7
   lengthInSec: 1
   simulationSpeed: 1
@@ -1786,7 +1610,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.35686275, g: 0.20000002, b: 0.12941177, a: 1}
+      maxColor: {r: 0.9607844, g: 0.59607846, b: 0.18431373, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -6327,14 +6151,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &459109948910359182
+--- !u!199 &2539716345278957966
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459109948910359183}
+  m_GameObject: {fileID: 2539716345278957967}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

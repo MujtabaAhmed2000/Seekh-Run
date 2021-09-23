@@ -22,11 +22,12 @@ public class FoodInfo : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (isPickedUp)
         {
             CancelInvoke();
+            transform.localScale = new Vector3(1, 1, 1);
         }
         else if (isFlung)
         {
