@@ -9,14 +9,14 @@ public class FoodInfo : MonoBehaviour
     bool isPickedUp = false;
     bool isFlung = false;
     float scaleDuration = 0.5f;
-    float scaleIncrease = 3f;
+    float scaleIncrease = 1f;
     float currentScale;
 
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         currentScale = transform.localScale.x;
-        makeBig();
+        //makeBig();
     }
 
     // Update is called once per frame
