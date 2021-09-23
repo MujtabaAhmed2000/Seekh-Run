@@ -7,6 +7,7 @@ public class SeekhCollision : MonoBehaviour
     [SerializeField] SeekhInfo seekhInfo;
     [SerializeField] List<GameObject> itemPositions;
     [SerializeField] SeekhMovement seekhMovement;
+    [SerializeField] SeekhRotation seekhRotation;
     float zPositionOnSeekh = 3f;
     float gapBetweenItems = 1.5f;
 
@@ -39,6 +40,8 @@ public class SeekhCollision : MonoBehaviour
         {
             Debug.Log("FINISHED");
             seekhMovement.setIsControl(false);
+            seekhRotation.setIsControl(false);
+            seekhMovement.finalAnimation();
         }
     }
 }
