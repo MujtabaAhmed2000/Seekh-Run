@@ -6,6 +6,7 @@ using DG.Tweening;
 public class FoodInfo : MonoBehaviour
 {
     Rigidbody rigidbody;
+    BoxCollider collider;
     bool isPickedUp = false;
     bool isFlung = false;
     float scaleDuration = 0.5f;
@@ -15,6 +16,7 @@ public class FoodInfo : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        collider = GetComponent<BoxCollider>();
         currentScale = transform.localScale.x;
         //makeBig();
     }
@@ -55,5 +57,10 @@ public class FoodInfo : MonoBehaviour
     {
         transform.DOScale(currentScale, scaleDuration);
         Invoke("makeBig", scaleDuration);
+    }
+
+    public void disableCollider()
+    {
+        collider.enabled = false;
     }
 }

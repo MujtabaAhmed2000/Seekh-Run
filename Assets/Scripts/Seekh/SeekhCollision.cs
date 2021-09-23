@@ -17,6 +17,8 @@ public class SeekhCollision : MonoBehaviour
         {
             int position = seekhInfo.getNumberOfItemsOnSeekh();
 
+            other.gameObject.GetComponent<FoodInfo>().disableCollider();
+
             seekhInfo.addItemOnSeekh(other.gameObject);
 
             //other.gameObject.GetComponent<FoodCollect>().attachToSkewer(zPositionOnSeekh, transform);
