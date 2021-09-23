@@ -9,10 +9,13 @@ public class FoodInfo : MonoBehaviour
     bool isPickedUp = false;
     bool isFlung = false;
     float scaleDuration = 0.5f;
+    float scaleIncrease = 3f;
+    float currentScale;
 
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        currentScale = transform.localScale.x;
         makeBig();
     }
 
@@ -44,13 +47,13 @@ public class FoodInfo : MonoBehaviour
 
     void makeBig()
     {
-        transform.DOScale(13f, scaleDuration);
+        transform.DOScale(currentScale + scaleIncrease, scaleDuration);
         Invoke("makeSmall", scaleDuration);
     }
 
     void makeSmall()
     {
-        transform.DOScale(10f, scaleDuration);
+        transform.DOScale(currentScale, scaleDuration);
         Invoke("makeBig", scaleDuration);
     }
 }
