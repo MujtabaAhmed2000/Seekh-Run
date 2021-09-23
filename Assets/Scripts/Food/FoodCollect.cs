@@ -27,7 +27,6 @@ public class FoodCollect : MonoBehaviour
     }
     public void attachToSkewer(float zOffset, Transform skewer)
     {
-        Debug.Log(skewer.gameObject.name);
         foodInfo.setIsPickedUp(true);
 
         //adding particle effect and sound
