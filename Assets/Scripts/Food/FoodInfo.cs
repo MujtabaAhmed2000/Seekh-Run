@@ -1,29 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class FoodInfo : MonoBehaviour
 {
     Rigidbody rigidbody;
     bool isPickedUp = false;
     bool isFlung = false;
-    float speed;
+    float scaleDuration = 0.5f;
+    float scaleIncrease = 3f;
+    float currentScale;
 
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        currentScale = transform.localScale.x;
+        makeBig();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isPickedUp)
+        if (isPickedUp)
         {
-            //ADD CODE FOR ANIMATION
-        }
-        else if (isPickedUp)
-        {
-            //ADD CODE FOR ANIMATION
+            CancelInvoke();
         }
         else if (isFlung)
         {
@@ -42,5 +43,17 @@ public class FoodInfo : MonoBehaviour
         isFlung = true;
         rigidbody.useGravity = true;
         rigidbody.AddForce(new Vector3(randomX, 5f, 0), ForceMode.Impulse);
+    }
+
+    void makeBig()
+    {
+        transform.DOScale(currentScale + scaleIncrease, scaleDuration);
+        Invoke("makeSmall", scaleDuration);
+    }
+
+    void makeSmall()
+    {
+        transform.DOScale(currentScale, scaleDuration);
+        Invoke("makeBig", scaleDuration);
     }
 }

@@ -1,22 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class SeekhMovement : MonoBehaviour
 {
-    [SerializeField] float speed = 5;
+    [SerializeField] float speed;
     Touch touch;
     float rightLevelBoundary;
     float sensitivity = 25;
-    float xRightBound;
-    float touchPosX;
-    //float newPosX;
+    bool isControl = true;
+    [SerializeField] Transform skewerStand;
+    //float xRightBound;
 
     // Start is called before the first frame update
     void Start()
     {
         //FOR TESTING PURPOSE USE 1440 OTHERWISE USE SCREEN.WIDTH
-        xRightBound = Screen.width / 2;
+        //xRightBound = Screen.width / 2;
 
         //WIDTH OF LEVEL IS 4.8
         rightLevelBoundary = 4.8f;
@@ -25,9 +26,12 @@ public class SeekhMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+        if (isControl)
+        {
+            transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+        }
 
-        if(Input.touchCount > 0)
+        if(Input.touchCount > 0 && isControl)
         {
             touch = Input.GetTouch(0);
 
@@ -42,5 +46,21 @@ public class SeekhMovement : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void shakeSeekh()
+    {
+        transform.DOShakePosition(1f);
+    }
+
+    public void setIsControl(bool value)
+    {
+        isControl = value;
+    }
+
+    public void finalAnimation()
+    {
+        transform.DORotate(new Vector3(0, -90, 0), 2f);
+        transform.DOMove(skewerStand.position, 2f);
     }
 }

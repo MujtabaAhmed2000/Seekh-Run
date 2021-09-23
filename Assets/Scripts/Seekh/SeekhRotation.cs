@@ -8,6 +8,7 @@ public class SeekhRotation : MonoBehaviour
     Touch touch;
     float maxRightAngle = 30;
     float touchMargin = 10;
+    bool isControl = true;
 
     //THIS IS THE HIGHEST DELTA I COULD GET BY SWIMPING THE SCREEN REALLY FAST. THIS VALUE CORRESPONDS TO THE touch.deltaPosition
     float maxDelta = 100;
@@ -16,7 +17,7 @@ public class SeekhRotation : MonoBehaviour
     {
         rotateReset();
 
-        if(Input.touchCount > 0)
+        if(Input.touchCount > 0 && isControl)
         {
             touch = Input.GetTouch(0);
 
@@ -59,5 +60,10 @@ public class SeekhRotation : MonoBehaviour
     void rotateReset()
     {
         transform.DORotate(new Vector3(0, 0, 0), 0.25f);
+    }
+
+    public void setIsControl(bool value)
+    {
+        isControl = value;
     }
 }

@@ -35,4 +35,8 @@ public class SeekhInfo : MonoBehaviour
         return temp;
     }
 
+    public List<GameObject> getItemsOnSeekh()
+    {
+        return itemsOnSeekh;
+    }
 }
