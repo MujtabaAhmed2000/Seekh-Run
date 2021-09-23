@@ -8,7 +8,7 @@ public class FoodCollect : MonoBehaviour
     FoodInfo foodInfo;
     float animDuration = 0.15f; //WAS 0.25f
 
-    [SerializeField] private AudioSource FoodPickUp;
+    [HideInInspector] private AudioSource FoodPickUp;
     public AudioClip Pick;
     public AudioClip Drop;
     [HideInInspector]public ParticleSystem shatter;
