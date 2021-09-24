@@ -10,7 +10,6 @@ public class SeekhMovement : MonoBehaviour
     float rightLevelBoundary;
     float sensitivity = 25;
     bool isControl = true;
-    [SerializeField] Transform skewerStand;
     //float xRightBound;
 
     // Start is called before the first frame update
@@ -56,11 +55,5 @@ public class SeekhMovement : MonoBehaviour
     public void setIsControl(bool value)
     {
         isControl = value;
-    }
-
-    public void finalAnimation()
-    {
-        transform.DORotate(new Vector3(0, -90, 0), 2f);
-        transform.DOMove(skewerStand.position, 2f);
     }
 }
