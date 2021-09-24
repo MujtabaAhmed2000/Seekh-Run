@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1160123059524548767}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 12}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 1160123059814813369}
   m_RootOrder: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CollisionMaterial: {fileID: 0}
-  solverIndices: 
+  solverIndices: 00000000
   m_SoftbodyBlueprint: {fileID: 11400000, guid: 0b95095100e0ee544aa8a3cc02611f86,
     type: 2}
   m_SelfCollisions: 0
