@@ -15,6 +15,8 @@ public class SeekhRotation : MonoBehaviour
     int spinCount = 0;
     float spinTime = 1.5f;
     [SerializeField] Transform finalSkewerPlaceholder;
+    [SerializeField] Transform mitten;
+    [SerializeField] Transform skewer;
 
     //THIS IS THE HIGHEST DELTA I COULD GET BY SWIMPING THE SCREEN REALLY FAST. THIS VALUE CORRESPONDS TO THE touch.deltaPosition
     float maxDelta = 100;
@@ -95,6 +97,7 @@ public class SeekhRotation : MonoBehaviour
     {
         transform.DORotate(new Vector3(0, -90, 0), finalAnimationTime);
         transform.DOMove(finalSkewerPlaceholder.position, finalAnimationTime);
+        mitten.DOLocalRotate(new Vector3(0, -90, 0), finalAnimationTime);
         Invoke("setIsFinalAnimationTrue", finalAnimationTime);
     }
 
@@ -105,6 +108,6 @@ public class SeekhRotation : MonoBehaviour
 
     void finalRotate()
     {
-        transform.DOLocalRotate(new Vector3(0, 0, 0), spinTime).SetLoops(-1);
+        //skewer.DORotate(new Vector3(90f, 0, 0), finalAnimationTime);
     }
 }
