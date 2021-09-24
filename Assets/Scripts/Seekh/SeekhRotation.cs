@@ -9,13 +9,22 @@ public class SeekhRotation : MonoBehaviour
     float maxRightAngle = 30;
     float touchMargin = 10;
     bool isControl = true;
+    bool isFinalAnimation = false;
+    float finalAnimationTime = 2f;
+    int spins = 5;
+    int spinCount = 0;
+    float spinTime = 1.5f;
+    [SerializeField] Transform finalSkewerPlaceholder;
 
     //THIS IS THE HIGHEST DELTA I COULD GET BY SWIMPING THE SCREEN REALLY FAST. THIS VALUE CORRESPONDS TO THE touch.deltaPosition
     float maxDelta = 100;
 
     void Update()
     {
-        rotateReset();
+        if (isControl)
+        {
+            rotateReset();
+        }
 
         if(Input.touchCount > 0 && isControl)
         {
@@ -29,13 +38,11 @@ public class SeekhRotation : MonoBehaviour
                 if(touch.deltaPosition.x < -touchMargin)
                 {
                     float angle = (-maxRightAngle * touch.deltaPosition.x) / -maxDelta;
-                    //Debug.Log(angle);
                     rotateLeft(angle);
                 }
                 else if(touch.deltaPosition.x > touchMargin)
                 {
                     float angle = (maxRightAngle * touch.deltaPosition.x) / maxDelta;
-                    //Debug.Log(angle);
                     rotateRight(angle);
                 }
                 else
@@ -43,6 +50,23 @@ public class SeekhRotation : MonoBehaviour
                     rotateReset();
                 }
 
+            }
+        }
+
+        //TOUCH INPUT FOR WHEN THE FINAL ANIMATION IS PLAYING
+        if (Input.touchCount > 0 && isFinalAnimation)
+        {
+            touch = Input.GetTouch(0);
+
+            if(touch.phase == TouchPhase.Ended)
+            {
+                Debug.Log(spinCount);
+                spinCount++;
+                finalRotate();
+                if (spinCount == spins)
+                {
+                    isFinalAnimation = false;
+                }
             }
         }
     }
@@ -65,5 +89,22 @@ public class SeekhRotation : MonoBehaviour
     public void setIsControl(bool value)
     {
         isControl = value;
+    }
+
+    public void finalAnimation()
+    {
+        transform.DORotate(new Vector3(0, -90, 0), finalAnimationTime);
+        transform.DOMove(finalSkewerPlaceholder.position, finalAnimationTime);
+        Invoke("setIsFinalAnimationTrue", finalAnimationTime);
+    }
+
+    void setIsFinalAnimationTrue()
+    {
+        isFinalAnimation = true;
+    }
+
+    void finalRotate()
+    {
+        transform.DOLocalRotate(new Vector3(0, 0, 0), spinTime).SetLoops(-1);
     }
 }
