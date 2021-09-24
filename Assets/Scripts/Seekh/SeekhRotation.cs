@@ -57,11 +57,16 @@ public class SeekhRotation : MonoBehaviour
         if (Input.touchCount > 0 && isFinalAnimation)
         {
             touch = Input.GetTouch(0);
-            spinCount++;
-            finalRotate();
-            if(spinCount == spins)
+
+            if(touch.phase == TouchPhase.Ended)
             {
-                isFinalAnimation = false;
+                Debug.Log(spinCount);
+                spinCount++;
+                finalRotate();
+                if (spinCount == spins)
+                {
+                    isFinalAnimation = false;
+                }
             }
         }
     }
@@ -100,6 +105,6 @@ public class SeekhRotation : MonoBehaviour
 
     void finalRotate()
     {
-        transform.DORotate(new Vector3(360, 0, 0), spinTime);
+        transform.DOLocalRotate(new Vector3(0, 0, 0), spinTime).SetLoops(-1);
     }
 }
