@@ -6,17 +6,12 @@ using DG.Tweening;
 public class FoodCollect : MonoBehaviour
 {
     FoodInfo foodInfo;
-    float animDuration = 0.01f; //WAS 0.25f
+    float animDuration = 0.15f; //WAS 0.25f
 
-    [SerializeField] private AudioSource FoodPickUp;
+    [HideInInspector] private AudioSource FoodPickUp;
     public AudioClip Pick;
     public AudioClip Drop;
     [HideInInspector]public ParticleSystem shatter;
-    //public float animDurationV2;
-    //public Ease AnimEase;
-    //float sub = 5f;
-    //int i = 1;
-
 
     private void Start()
     {
@@ -32,28 +27,18 @@ public class FoodCollect : MonoBehaviour
         //adding particle effect and sound
         FoodPickUp.clip = Pick;
         FoodPickUp.PlayOneShot(FoodPickUp.clip);
-        GetComponent<Animation>().Stop();
 
-
-        //var main = shatter.gameObject.GetComponent<ParticleSystem>().main;
-        //main.startColor = GetComponent<MeshRenderer>().material.color;
         shatter.Play();
         transform.SetParent(skewer);
 
+        Vector3 offset = new Vector3(0, 0, 2.5f);
 
-        //transform
-        //.DOMoveZ(skewer.position.z - zOffset, animDuration)
-        //.SetEase(Ease.OutBounce);
-
-        transform.DOMove(skewer.position, animDuration).SetEase(Ease.OutBounce);
+        transform.DOMove(skewer.position + offset , animDuration).SetEase(Ease.OutBounce);
 
         //TO MAKE SURE IT ALIGNS EXACTLY ONTO THE POISITION
         Invoke("alignItem", animDuration + 0.1f);
+        
         transform.DOShakeScale(1f);
-
-        //transform.localPosition = new Vector3(0, 0, 0);
-        //transform.localEulerAngles = new Vector3(0, 0, 0);
-        //transform.DOScale(10f, 0.25f);
     }
 
     public void detachFromSkewer()
@@ -61,8 +46,6 @@ public class FoodCollect : MonoBehaviour
         //adding particle effect and sound
         FoodPickUp.clip = Drop;
         FoodPickUp.PlayOneShot(FoodPickUp.clip);
-        //var main = shatter.gameObject.GetComponent<ParticleSystem>().main;
-        //main.startColor = GetComponent<MeshRenderer>().material.color;
         shatter.Play();
         
         foodInfo.setIsPickedUp(false);
@@ -73,7 +56,5 @@ public class FoodCollect : MonoBehaviour
     {
         transform.localPosition = new Vector3(0, 0, 0);
         transform.localEulerAngles = new Vector3(0, 0, 0);
-        transform.localScale = new Vector3(10, 10, 10);
-        //transform.DOScale(10f, 0.25f);
     }
 }

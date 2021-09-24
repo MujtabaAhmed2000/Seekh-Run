@@ -7,6 +7,7 @@ public class SeekhCollision : MonoBehaviour
     [SerializeField] SeekhInfo seekhInfo;
     [SerializeField] List<GameObject> itemPositions;
     [SerializeField] SeekhMovement seekhMovement;
+    [SerializeField] SeekhRotation seekhRotation;
     float zPositionOnSeekh = 3f;
     float gapBetweenItems = 1.5f;
 
@@ -15,6 +16,8 @@ public class SeekhCollision : MonoBehaviour
         if(other.gameObject.tag == "Food")
         {
             int position = seekhInfo.getNumberOfItemsOnSeekh();
+
+            other.gameObject.GetComponent<FoodInfo>().disableCollider();
 
             seekhInfo.addItemOnSeekh(other.gameObject);
 
@@ -33,6 +36,14 @@ public class SeekhCollision : MonoBehaviour
             //seekhMovement.shakeSeekh();
 
             zPositionOnSeekh += gapBetweenItems;
+        }
+
+        else if(other.gameObject.tag == "Finish")
+        {
+            Debug.Log("FINISHED");
+            seekhMovement.setIsControl(false);
+            seekhRotation.setIsControl(false);
+            seekhRotation.finalAnimation();
         }
     }
 }
