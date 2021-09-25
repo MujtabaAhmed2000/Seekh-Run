@@ -64,4 +64,19 @@ public class FoodInfo : MonoBehaviour
     {
         collider.enabled = false;
     }
+
+    public void lerpColorCooked()
+    {
+
+    }
+
+    public void lerpColorBurnt()
+    {
+
+    }
+
+    public void lerpColorMid()
+    {
+
+    }
 }
