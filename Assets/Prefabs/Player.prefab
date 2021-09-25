@@ -225,9 +225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cacef1087efd741b8e82b8b13e624d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 15
   finalSkewerPlaceholder: {fileID: 0}
   mitten: {fileID: 8444336514754778805}
+  skewer: {fileID: 0}
 --- !u!114 &-6725787191350395172
 MonoBehaviour:
   m_ObjectHideFlags: 0
