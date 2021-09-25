@@ -22,6 +22,9 @@ public class FoodCollect : MonoBehaviour
     }
     public void attachToSkewer(float zOffset, Transform skewer)
     {
+        //VIBRATION
+        Handheld.Vibrate();
+
         foodInfo.setIsPickedUp(true);
 
         //adding particle effect and sound
@@ -43,6 +46,9 @@ public class FoodCollect : MonoBehaviour
 
     public void detachFromSkewer()
     {
+        //VIBRATION
+        Handheld.Vibrate();
+
         //adding particle effect and sound
         FoodPickUp.clip = Drop;
         FoodPickUp.PlayOneShot(FoodPickUp.clip);
