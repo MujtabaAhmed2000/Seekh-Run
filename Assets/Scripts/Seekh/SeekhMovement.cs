@@ -10,6 +10,11 @@ public class SeekhMovement : MonoBehaviour
     float rightLevelBoundary;
     float sensitivity = 25;
     bool isControl = true;
+    bool isFinalAnimation = false;
+    float finalAnimationTime = 2f;
+    [SerializeField] Transform finalSkewerPlaceholder;
+    [SerializeField] Transform mitten;
+    [SerializeField] Transform skewer;
     //float xRightBound;
 
     // Start is called before the first frame update
@@ -45,6 +50,18 @@ public class SeekhMovement : MonoBehaviour
                 }
             }
         }
+
+        //TOUCH INPUT FOR WHEN THE FINAL ANIMATION IS PLAYING
+        if (Input.touchCount > 0 && isFinalAnimation)
+        {
+            touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Ended)
+            {
+                StartCoroutine(finalRotate());
+                isFinalAnimation = false;
+            }
+        }
     }
 
     public void shakeSeekh()
@@ -55,5 +72,28 @@ public class SeekhMovement : MonoBehaviour
     public void setIsControl(bool value)
     {
         isControl = value;
+    }
+
+    public void finalAnimation()
+    {
+        skewer.DORotate(new Vector3(0, -90f, 0), finalAnimationTime);
+        transform.DOMove(finalSkewerPlaceholder.position, finalAnimationTime);
+        mitten.DOLocalRotate(new Vector3(0, -90, 0), finalAnimationTime);
+        Invoke("setIsFinalAnimationTrue", finalAnimationTime);
+    }
+
+    void setIsFinalAnimationTrue()
+    {
+        isFinalAnimation = true;
+    }
+
+    IEnumerator finalRotate()
+    {
+        for(int i = 0; i < 360; i++)
+        {
+            skewer.Rotate(new Vector3(0, 0, -1));
+
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }

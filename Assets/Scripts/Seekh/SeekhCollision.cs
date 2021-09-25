@@ -46,7 +46,8 @@ public class SeekhCollision : MonoBehaviour
             Debug.Log("FINISHED");
             seekhMovement.setIsControl(false);
             seekhRotation.setIsControl(false);
-            seekhRotation.finalAnimation();
+            //seekhRotation.finalAnimation();
+            seekhMovement.finalAnimation();
         }
     }
 

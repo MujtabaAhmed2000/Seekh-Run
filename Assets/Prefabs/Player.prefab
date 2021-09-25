@@ -226,6 +226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  finalSkewerPlaceholder: {fileID: 0}
+  mitten: {fileID: 8444336514754778805}
 --- !u!114 &-6725787191350395172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,9 +474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e856776df078394ab4d4d02982acc5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalSkewerPlaceholder: {fileID: 0}
-  mitten: {fileID: 8444336514754778805}
-  skewer: {fileID: 7046267081270248080}
 --- !u!1001 &712327711786314395
 PrefabInstance:
   m_ObjectHideFlags: 0

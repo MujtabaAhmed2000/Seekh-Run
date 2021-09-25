@@ -207,7 +207,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8568920273736717202, guid: f9f8d8090aa8e9f47b3047c56040bce7,
         type: 3}
+      propertyPath: skewer
+      value: 
+      objectReference: {fileID: 1252562873}
+    - target: {fileID: -8568920273736717202, guid: f9f8d8090aa8e9f47b3047c56040bce7,
+        type: 3}
       propertyPath: skewerStand
+      value: 
+      objectReference: {fileID: 1814097786}
+    - target: {fileID: -8568920273736717202, guid: f9f8d8090aa8e9f47b3047c56040bce7,
+        type: 3}
+      propertyPath: finalSkewerPlaceholder
       value: 
       objectReference: {fileID: 1814097786}
     - target: {fileID: 6807816903453792721, guid: f9f8d8090aa8e9f47b3047c56040bce7,
@@ -2496,6 +2506,12 @@ PrefabInstance:
 --- !u!1 &1252562872 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8897210368310453888, guid: f9f8d8090aa8e9f47b3047c56040bce7,
+    type: 3}
+  m_PrefabInstance: {fileID: 37593528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1252562873 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1095185299881397092, guid: f9f8d8090aa8e9f47b3047c56040bce7,
     type: 3}
   m_PrefabInstance: {fileID: 37593528}
   m_PrefabAsset: {fileID: 0}
