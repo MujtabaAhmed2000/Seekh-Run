@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class SeekhCollision : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class SeekhCollision : MonoBehaviour
         
         else if(other.gameObject.tag == "Wall")
         {
+            shakeSeekh();
+
             GameObject item = seekhInfo.removeTopItemOnSeekh();
             item.GetComponent<FoodCollect>().detachFromSkewer();
             item.GetComponent<FoodInfo>().flingItemUp();
@@ -45,5 +48,10 @@ public class SeekhCollision : MonoBehaviour
             seekhRotation.setIsControl(false);
             seekhRotation.finalAnimation();
         }
+    }
+
+    void shakeSeekh()
+    {
+        transform.DOShakePosition(0.3f, strength: 0.5f);
     }
 }
