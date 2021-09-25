@@ -71,7 +71,6 @@ MonoBehaviour:
   - Assets/NF3DFaceAnimFree50Win/_FitDat/siMask.png
   - Assets/NF3DFaceAnimFree50Win/Editor/Helpers/PickedPoint.cs
   - Assets/NF3DFaceAnimFree50Win/_Scenes/Start.unity
-  - Assets/NF3DFaceAnimFree50Win
   - Assets/NF3DFaceAnimFree50Win/documentation/12.png
   - Assets/NF3DFaceAnimFree50Win/_FitDat
   - Assets/NF3DFaceAnimFree50Win/Resources/Materials/Materials/eye_001.mat
@@ -109,7 +108,6 @@ MonoBehaviour:
   - Assets/NF3DFaceAnimFree50Win/_FitDat/eyeR_hi.tri
   - Assets/NF3DFaceAnimFree50Win/documentation/4.png
   - Assets/NF3DFaceAnimFree50Win/_FitDat/teethLower.bmp
-  - Assets/NF3DFaceAnimFree50Win/Resources/Materials
   - Assets/NF3DFaceAnimFree50Win/_FitDat/teethLower.png
   - Assets/NF3DFaceAnimFree50Win/_FitDat/teethUpper.egm
   - Assets/NF3DFaceAnimFree50Win/Resources/SampleFront.jpg
@@ -125,7 +123,6 @@ MonoBehaviour:
   - Assets/NF3DFaceAnimFree50Win/Editor/Windows/AppUIWindow.cs
   - Assets/NF3DFaceAnimFree50Win/_FitDat/skin_hi.tri
   - Assets/NF3DFaceAnimFree50Win/Resources/eye.fbx
-  - Assets/NF3DFaceAnimFree50Win/Resources
   - Assets/NF3DFaceAnimFree50Win/_Materials/out_eyeR_hi.png.mat
   - Assets/NF3DFaceAnimFree50Win/_FitDat/eyeR_brown_hi.bmp
   - Assets/NF3DFaceAnimFree50Win/_FitDat/teethUpper.fr3d
@@ -179,7 +176,6 @@ MonoBehaviour:
   - Assets/NF3DFaceAnimFree50Win/documentation/10_A.png
   - Assets/NF3DFaceAnimFree50Win/_Materials/out_teethUpper.png.mat
   - Assets/NF3DFaceAnimFree50Win/_Textures/out_teethUpper.bmp
-  - Assets/NF3DFaceAnimFree50Win/Editor
   - Assets/NF3DFaceAnimFree50Win/_Materials/DefaultDiffuse.mat
   - Assets/NF3DFaceAnimFree50Win/_FitDat/siF.egt
   - Assets/NF3DFaceAnimFree50Win/_FitDat/tongue.bmp

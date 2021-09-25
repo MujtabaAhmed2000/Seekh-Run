@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Forest2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1517019888071542, guid: 39b499a5c4069b14f9642f978230eb46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4779962294756728, guid: 39b499a5c4069b14f9642f978230eb46, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -214,6 +218,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807816903453792721, guid: f9f8d8090aa8e9f47b3047c56040bce7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7018061806166177901, guid: f9f8d8090aa8e9f47b3047c56040bce7,
         type: 3}
@@ -295,6 +304,10 @@ PrefabInstance:
     - target: {fileID: 1517019888071542, guid: 39b499a5c4069b14f9642f978230eb46, type: 3}
       propertyPath: m_Name
       value: Forest2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517019888071542, guid: 39b499a5c4069b14f9642f978230eb46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4779962294756728, guid: 39b499a5c4069b14f9642f978230eb46, type: 3}
       propertyPath: m_RootOrder
@@ -421,6 +434,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EclairChocolate
       objectReference: {fileID: 0}
+    - target: {fileID: 6162237185671749614, guid: 66c987c051082674286c4abf834df540,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c987c051082674286c4abf834df540, type: 3}
 --- !u!1001 &79876420
@@ -434,6 +452,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pineapple
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579336891943829768, guid: 3d9203c3880ecd1448e5dce7b2f9d2f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1579336891943830001, guid: 3d9203c3880ecd1448e5dce7b2f9d2f6,
         type: 3}
@@ -507,7 +530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &85420115
 Transform:
   m_ObjectHideFlags: 0
@@ -541,7 +564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &123479003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,6 +668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese_02 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000014078492148, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -714,6 +741,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 459109948910359183, guid: 2bbe09b0afa204d46b81c47da683e86c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 459109948910359190, guid: 2bbe09b0afa204d46b81c47da683e86c,
         type: 3}
@@ -787,7 +819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &197593479
 Transform:
   m_ObjectHideFlags: 0
@@ -869,6 +901,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Saw
       objectReference: {fileID: 0}
+    - target: {fileID: 8886665086395749581, guid: 24f4e9d079dca954fa9f8d9dc86e3958,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24f4e9d079dca954fa9f8d9dc86e3958, type: 3}
 --- !u!1001 &242617096
@@ -882,6 +919,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834554628865142470, guid: eb1d2a57d025a1f45b3ddb9d4c205d82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7714387223629522621, guid: eb1d2a57d025a1f45b3ddb9d4c205d82,
         type: 3}
@@ -960,7 +1002,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &322690451
 Transform:
   m_ObjectHideFlags: 0
@@ -1066,6 +1108,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sausage
       objectReference: {fileID: 0}
+    - target: {fileID: 206687307632468938, guid: fc85497324b44e749b0c3b5f090021d1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 206687307632468943, guid: fc85497324b44e749b0c3b5f090021d1,
         type: 3}
       propertyPath: m_RootOrder
@@ -1133,6 +1180,10 @@ PrefabInstance:
     - target: {fileID: 1544389813323494, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
       propertyPath: m_Name
       value: Hex29 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544389813323494, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4677852998728996, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
       propertyPath: m_RootOrder
@@ -1203,6 +1254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese_02 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000014078492148, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -1271,6 +1326,10 @@ PrefabInstance:
     - target: {fileID: 1517019888071542, guid: 39b499a5c4069b14f9642f978230eb46, type: 3}
       propertyPath: m_Name
       value: Forest2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517019888071542, guid: 39b499a5c4069b14f9642f978230eb46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4779962294756728, guid: 39b499a5c4069b14f9642f978230eb46, type: 3}
       propertyPath: m_RootOrder
@@ -1415,6 +1474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hex29 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1544389813323494, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4677852998728996, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
       propertyPath: m_RootOrder
       value: 37
@@ -1489,7 +1552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -1638,6 +1701,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tomato
       objectReference: {fileID: 0}
+    - target: {fileID: 2149740274939742206, guid: 47d71fa9725710b4b9c5ca0004c9e9c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d71fa9725710b4b9c5ca0004c9e9c5, type: 3}
 --- !u!1001 &747491906
@@ -1650,6 +1718,10 @@ PrefabInstance:
     - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_Name
       value: Cheese_02 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000014078492148, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_RootOrder
@@ -1720,6 +1792,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000014078492148, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -1789,6 +1865,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000014078492148, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1857,6 +1937,10 @@ PrefabInstance:
     - target: {fileID: 1544389813323494, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
       propertyPath: m_Name
       value: Hex29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544389813323494, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4677852998728996, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
       propertyPath: m_RootOrder
@@ -1934,7 +2018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &963194226
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2025,6 +2109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Forest2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1517019888071542, guid: 39b499a5c4069b14f9642f978230eb46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4779962294756728, guid: 39b499a5c4069b14f9642f978230eb46, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -2093,6 +2181,10 @@ PrefabInstance:
     - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_Name
       value: Cheese_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000014078492148, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_RootOrder
@@ -2167,7 +2259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1064795881
 Transform:
   m_ObjectHideFlags: 0
@@ -2192,6 +2284,10 @@ PrefabInstance:
     - target: {fileID: 1544389813323494, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
       propertyPath: m_Name
       value: Hex29 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544389813323494, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4677852998728996, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
       propertyPath: m_RootOrder
@@ -2263,6 +2359,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rotating Flaps (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 18808654197503442, guid: 0ed2b924893fdee438ff80d350900de5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 795170054232960872, guid: 0ed2b924893fdee438ff80d350900de5,
         type: 3}
       propertyPath: m_RootOrder
@@ -2330,6 +2431,10 @@ PrefabInstance:
     - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_Name
       value: Cheese_02 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000014078492148, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_RootOrder
@@ -2404,7 +2509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1219456026
 Transform:
   m_ObjectHideFlags: 0
@@ -2434,7 +2539,7 @@ PrefabInstance:
     - target: {fileID: 1931159641891903312, guid: 6b5b2ce8d98a832448ad897304f41b58,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1931159641891903321, guid: 6b5b2ce8d98a832448ad897304f41b58,
         type: 3}
@@ -2604,6 +2709,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shrimp
       objectReference: {fileID: 0}
+    - target: {fileID: 4429483050205140058, guid: 52f9a15ad80bf46428c87728a44ceccc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f9a15ad80bf46428c87728a44ceccc, type: 3}
 --- !u!1001 &1291976449
@@ -2616,6 +2726,10 @@ PrefabInstance:
     - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_Name
       value: Cheese_02 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000014078492148, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_RootOrder
@@ -2686,6 +2800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Forest2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1517019888071542, guid: 39b499a5c4069b14f9642f978230eb46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4779962294756728, guid: 39b499a5c4069b14f9642f978230eb46, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -2754,6 +2872,10 @@ PrefabInstance:
     - target: {fileID: 1544389813323494, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
       propertyPath: m_Name
       value: Hex29 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544389813323494, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4677852998728996, guid: f2360a07b6cee064aad307fa66e6f8f8, type: 3}
       propertyPath: m_RootOrder
@@ -2828,7 +2950,7 @@ PrefabInstance:
     - target: {fileID: 2524032698625245232, guid: b760ded9407bb914c80cef6dc8fba841,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2849618663977435012, guid: b760ded9407bb914c80cef6dc8fba841,
         type: 3}
@@ -2898,6 +3020,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rotating trap (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424271619663260388, guid: 7a0d9f33abcb7484abb5e174cfe14a14,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9197149556945367134, guid: 7a0d9f33abcb7484abb5e174cfe14a14,
         type: 3}
@@ -3023,6 +3150,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese
       objectReference: {fileID: 0}
+    - target: {fileID: 6814441456954484315, guid: 36fe29071bd02d4448741611cb3de634,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6814441457777662359, guid: 36fe29071bd02d4448741611cb3de634,
         type: 3}
       propertyPath: solverIndices.Array.size
@@ -3040,6 +3172,10 @@ PrefabInstance:
     - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_Name
       value: Cheese_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000014078492148, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_RootOrder
@@ -3166,6 +3302,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Onion
       objectReference: {fileID: 0}
+    - target: {fileID: 3071576407199417620, guid: 1958f7fe1835a7c488b73050706ea7eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1958f7fe1835a7c488b73050706ea7eb, type: 3}
 --- !u!4 &1814097786 stripped
@@ -3227,6 +3368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chicken
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160123059814813358, guid: 9b15b17b72bda624e872a48b104a1b4d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1160123059814813369, guid: 9b15b17b72bda624e872a48b104a1b4d,
         type: 3}
@@ -3295,6 +3441,10 @@ PrefabInstance:
     - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_Name
       value: Cheese_02 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000014078492148, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
       propertyPath: m_RootOrder
