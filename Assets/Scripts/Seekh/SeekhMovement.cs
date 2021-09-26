@@ -52,16 +52,16 @@ public class SeekhMovement : MonoBehaviour
         }
 
         //TOUCH INPUT FOR WHEN THE FINAL ANIMATION IS PLAYING
-        if (Input.touchCount > 0 && isFinalAnimation)
-        {
-            touch = Input.GetTouch(0);
+        //if (Input.touchCount > 0 && isFinalAnimation)
+        //{
+        //    touch = Input.GetTouch(0);
 
-            if (touch.phase == TouchPhase.Ended)
-            {
-                StartCoroutine(finalRotate());
-                isFinalAnimation = false;
-            }
-        }
+        //    if (touch.phase == TouchPhase.Ended)
+        //    {
+        //        StartCoroutine(finalRotate());
+        //        isFinalAnimation = false;
+        //    }
+        //}
     }
 
     public void shakeSeekh()
@@ -87,7 +87,7 @@ public class SeekhMovement : MonoBehaviour
         isFinalAnimation = true;
     }
 
-    IEnumerator finalRotate()
+    public IEnumerator finalRotate()
     {
         for(int i = 0; i < 360; i++)
         {
@@ -95,5 +95,11 @@ public class SeekhMovement : MonoBehaviour
 
             yield return new WaitForSeconds(0.01f);
         }
+        isFinalAnimation = false;
+    }
+
+    public bool getIsFinalAnimation()
+    {
+        return isFinalAnimation;
     }
 }
