@@ -51,18 +51,6 @@ public class SeekhMovement : MonoBehaviour
                 }
             }
         }
-
-        //TOUCH INPUT FOR WHEN THE FINAL ANIMATION IS PLAYING
-        //if (Input.touchCount > 0 && isFinalAnimation)
-        //{
-        //    touch = Input.GetTouch(0);
-
-        //    if (touch.phase == TouchPhase.Ended)
-        //    {
-        //        StartCoroutine(finalRotate());
-        //        isFinalAnimation = false;
-        //    }
-        //}
     }
 
     public void shakeSeekh()
@@ -98,10 +86,19 @@ public class SeekhMovement : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         isFinalAnimation = false;
+        moveToPlate();
     }
 
     public bool getIsFinalAnimation()
     {
         return isFinalAnimation;
+    }
+
+    void moveToPlate()
+    {
+        mitten.gameObject.SetActive(false);
+        cameraFollow.platePosition();
+        Vector3 offset = new Vector3(0, -1f, 15);
+        transform.DOMove(transform.position + offset, 1.5f);
     }
 }

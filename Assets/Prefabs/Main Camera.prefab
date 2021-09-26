@@ -100,3 +100,5 @@ MonoBehaviour:
   skewerOffset: {x: 0, y: 0, z: -6}
   finalAnimOffset: {x: 0, y: 12, z: 9}
   finalAnimeRotation: {x: 52, y: 0, z: 0}
+  plateOffset: {x: -3, y: 4, z: 6}
+  plateRotation: {x: 0, y: 0, z: 0}

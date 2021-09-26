@@ -11,6 +11,8 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] Vector3 skewerOffset;
     [SerializeField] Vector3 finalAnimOffset;
     [SerializeField] Vector3 finalAnimeRotation;
+    [SerializeField] Vector3 plateOffset;
+    [SerializeField] Vector3 plateRotation;
 
     // Update is called once per frame
     void Update()
@@ -32,5 +34,12 @@ public class CameraFollow : MonoBehaviour
         isFollowing = false;
         transform.DOMove(target.position + finalAnimOffset, 2f);
         transform.DORotate(finalAnimeRotation, 2f);
+    }
+
+    public void platePosition()
+    {
+        gameObject.GetComponent<Camera>().DOFieldOfView(90, 1.5f);
+        transform.DOMove(target.position + plateOffset, 1.5f);
+        transform.DORotate(plateRotation, 1.5f);
     }
 }
