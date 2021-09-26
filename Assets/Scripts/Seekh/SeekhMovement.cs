@@ -15,6 +15,7 @@ public class SeekhMovement : MonoBehaviour
     [SerializeField] Transform finalSkewerPlaceholder;
     [SerializeField] Transform mitten;
     [SerializeField] Transform skewer;
+    [SerializeField] CameraFollow cameraFollow;
     //float xRightBound;
 
     // Start is called before the first frame update
