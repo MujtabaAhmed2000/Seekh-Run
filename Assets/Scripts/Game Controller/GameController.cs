@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     [SerializeField] SeekhInfo seekhInfo;
     [SerializeField] SeekhMovement seekhMovement;
     [SerializeField] SliderMovement sliderMovement;
+    [SerializeField] CameraFollow cameraFollow;
+
     Touch touch;
     bool sliderIsMoving = false;
     bool sliderMovementFlag = true;

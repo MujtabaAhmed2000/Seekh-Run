@@ -77,6 +77,7 @@ public class SeekhMovement : MonoBehaviour
 
     public void finalAnimation()
     {
+        cameraFollow.finalAnimationPosition();
         skewer.DORotate(new Vector3(0, -90f, 0), finalAnimationTime);
         transform.DOMove(finalSkewerPlaceholder.position, finalAnimationTime);
         mitten.DOLocalRotate(new Vector3(0, -90, 0), finalAnimationTime);
