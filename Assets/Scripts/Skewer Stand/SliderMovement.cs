@@ -7,20 +7,18 @@ public class SliderMovement : MonoBehaviour
     [SerializeField] Transform slider;
 
     bool stop = false;
-    float speed = 2f;
-    float leftBound = -1.754f;
-    float rightBound = 1.754f;
+    float speed = 1f;
 
     // Update is called once per frame
     void Update()
     {
         if (!stop)
         {
-            if(slider.position.x > rightBound || slider.position.x < leftBound)
-            {
-                speed *= -1;
-            }
             slider.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+            if(slider.position.x > 1.5)
+            {
+                stop = true;
+            }
         }
     }
 
@@ -28,17 +26,21 @@ public class SliderMovement : MonoBehaviour
     {
         stop = true;
 
-        if (slider.position.x < -1.4 || slider.position.x > 1.4)
-        {
-            return "Burnt";
-        }
-        else if(slider.position.x < -0.47 || slider.position.x > 0.47)
+        if (slider.position.x < -0.64)
         {
             return "Raw";
         }
-        else
+        else if(slider.position.x < 0.6)
         {
             return "Cooked";
+        }
+        else if(slider.position.x < 1.5)
+        {
+            return "Smoke";
+        }
+        else
+        {
+            return "Burnt";
         }
     }
 

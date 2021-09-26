@@ -10,32 +10,40 @@ public class GameController : MonoBehaviour
     [SerializeField] SeekhMovement seekhMovement;
     [SerializeField] SliderMovement sliderMovement;
     Touch touch;
+    bool sliderIsMoving = false;
+    bool sliderMovementFlag = true;
+
+    // CAN BE "Burnt" "Raw" "Cooked" "Smoke"
+    String stateOfFood = null;
 
     enum listOfItems { Tomato, Beef };
     [SerializeField] List<listOfItems> itemsInLevel;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (seekhMovement.getIsFinalAnimation())
+        if (seekhMovement.getIsFinalAnimation() && sliderMovementFlag)
         {
+            sliderMovementFlag = false;
             sliderMovement.setEnabled(true);
+            sliderIsMoving = true;
+            Invoke("sliderTimer", 3f);
+        }
 
-            if(Input.touchCount > 0)
+        if (Input.touchCount > 0 && sliderIsMoving)
+        {
+            touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Ended)
             {
-                touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Ended)
-                {
-                    Debug.Log(sliderMovement.getCookState());
-                    StartCoroutine(seekhMovement.finalRotate());
-                }
+                CancelInvoke();
+                sliderIsMoving = false;
+                stateOfFood = sliderMovement.getCookState();
+                Debug.Log(stateOfFood);
+                StartCoroutine(seekhMovement.finalRotate());
+                Invoke("hideSlider", 1f);
             }
         }
+ 
     }
 
     public void checkWin()
@@ -56,4 +64,17 @@ public class GameController : MonoBehaviour
 
         //CALL LOSE CONDITION
     }
+
+    void sliderTimer()
+    {
+        sliderIsMoving = false;
+        StartCoroutine(seekhMovement.finalRotate());
+        stateOfFood = "Burnt";
+        Invoke("hideSlider", 1f);
+    }
+
+    void hideSlider()
+    {
+        sliderMovement.setEnabled(false);
+    } 
 }
