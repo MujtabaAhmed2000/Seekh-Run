@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.103182904, g: 0.53545636, b: 1.5595603, a: 1}
+  m_IndirectSpecularColor: {r: 0.09802447, g: 0.5086796, b: 1.4815608, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1121,6 +1121,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a0d9f33abcb7484abb5e174cfe14a14, type: 3}
+--- !u!4 &363312480 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6055623314778519223, guid: b760ded9407bb914c80cef6dc8fba841,
+    type: 3}
+  m_PrefabInstance: {fileID: 1635289207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &374831825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1884,6 +1890,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
+--- !u!4 &908669412 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4791472247827289024, guid: b760ded9407bb914c80cef6dc8fba841,
+    type: 3}
+  m_PrefabInstance: {fileID: 1635289207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &929788538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2172,14 +2184,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
         type: 3}
+      propertyPath: sadEmoji
+      value: 
+      objectReference: {fileID: 363312480}
+    - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
+        type: 3}
       propertyPath: seekhInfo
       value: 
       objectReference: {fileID: 1121238458}
     - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
         type: 3}
+      propertyPath: sickEmoji
+      value: 
+      objectReference: {fileID: 908669412}
+    - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
+        type: 3}
+      propertyPath: happyEmoji
+      value: 
+      objectReference: {fileID: 1635289209}
+    - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
+        type: 3}
       propertyPath: cameraFollow
       value: 
       objectReference: {fileID: 1374316169}
+    - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
+        type: 3}
+      propertyPath: neutralEmoji
+      value: 
+      objectReference: {fileID: 1390815780}
     - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
         type: 3}
       propertyPath: seekhMovement
@@ -2852,6 +2884,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fff768de2845747a430e4f0f8d3c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1390815780 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2875805169261426826, guid: b760ded9407bb914c80cef6dc8fba841,
+    type: 3}
+  m_PrefabInstance: {fileID: 1635289207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1451634037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3033,7 +3071,7 @@ PrefabInstance:
     - target: {fileID: 2849618663977435012, guid: b760ded9407bb914c80cef6dc8fba841,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 148.44
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2849618663977435012, guid: b760ded9407bb914c80cef6dc8fba841,
         type: 3}
@@ -3080,6 +3118,12 @@ PrefabInstance:
 --- !u!4 &1635289208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1084028289502748305, guid: b760ded9407bb914c80cef6dc8fba841,
+    type: 3}
+  m_PrefabInstance: {fileID: 1635289207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1635289209 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3681258019949615192, guid: b760ded9407bb914c80cef6dc8fba841,
     type: 3}
   m_PrefabInstance: {fileID: 1635289207}
   m_PrefabAsset: {fileID: 0}

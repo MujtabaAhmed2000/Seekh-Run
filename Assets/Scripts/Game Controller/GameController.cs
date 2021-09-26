@@ -11,6 +11,11 @@ public class GameController : MonoBehaviour
     [SerializeField] SliderMovement sliderMovement;
     [SerializeField] CameraFollow cameraFollow;
 
+    [SerializeField] Transform neutralEmoji;
+    [SerializeField] Transform sadEmoji;
+    [SerializeField] Transform happyEmoji;
+    [SerializeField] Transform sickEmoji;
+
     Touch touch;
     bool sliderIsMoving = false;
     bool sliderMovementFlag = true;
@@ -47,9 +52,16 @@ public class GameController : MonoBehaviour
  
     }
 
+    //IS BEING CALLED FROM HIDESLIDER FUNCTION
     public void checkWin()
     {
         List<GameObject> itemsOnSeekh = seekhInfo.getItemsOnSeekh();
+
+        if(itemsOnSeekh.Capacity == 0)
+        {
+            showSad();
+            return;
+        }
 
         for(int i = 0; i < itemsOnSeekh.Capacity; i++)
         {
@@ -57,13 +69,28 @@ public class GameController : MonoBehaviour
             {
                 if (itemsOnSeekh[i].name.Contains(name))
                 {
-                    //CALL WIN CONDITION
+                    if (stateOfFood.Equals("Cooked"))
+                    {
+                        showHappy();
+                    }
+                    else if (stateOfFood.Equals("Raw"))
+                    {
+                        showSick();
+                    }
+                    else if (stateOfFood.Equals("Smoke"))
+                    {
+                        showHappy();
+                    }
+                    else if (stateOfFood.Equals("Burnt"))
+                    {
+                        showSick();
+                    }
                     return;
                 }
             }
         }
 
-        //CALL LOSE CONDITION
+        showSad();
     }
 
     void sliderTimer()
@@ -77,5 +104,24 @@ public class GameController : MonoBehaviour
     void hideSlider()
     {
         sliderMovement.setEnabled(false);
+        Invoke("checkWin", 2f);
     } 
+
+    void showHappy()
+    {
+        neutralEmoji.gameObject.SetActive(false);
+        happyEmoji.gameObject.SetActive(true);
+    }
+
+    void showSad()
+    {
+        neutralEmoji.gameObject.SetActive(false);
+        sadEmoji.gameObject.SetActive(true);
+    }
+
+    void showSick()
+    {
+        neutralEmoji.gameObject.SetActive(false);
+        sickEmoji.gameObject.SetActive(true);
+    }
 }
