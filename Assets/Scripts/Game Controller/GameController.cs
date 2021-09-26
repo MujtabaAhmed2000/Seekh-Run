@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [ExecuteInEditMode]
 public class GameController : MonoBehaviour
@@ -16,6 +18,11 @@ public class GameController : MonoBehaviour
     [SerializeField] Transform happyEmoji;
     [SerializeField] Transform sickEmoji;
 
+    [Header("UI")]
+    [SerializeField] GameObject levelCounter;
+    [SerializeField] GameObject winScreen;
+    [SerializeField] GameObject loseScreen;
+
     Touch touch;
     bool sliderIsMoving = false;
     bool sliderMovementFlag = true;
@@ -28,6 +35,12 @@ public class GameController : MonoBehaviour
     [Header("TYPE FROM ABOVE LIST")]
     [Header("Cheese, Chicken, Donut, EclairChocolate, Muffin, Mushroom, Onion, Pepper, Pineapple, Salad, Sausage, Shrimp, SweetPepper, Tomato")]
     [SerializeField] List<String> itemsInLevel;
+
+    private void Start()
+    {
+        //levelCounter.GetComponent<Text>().text = SceneManager.GetActiveScene().name;
+        Debug.Log(SceneManager.GetActiveScene().name);
+    }
 
     // Update is called once per frame
     void Update()
@@ -63,35 +76,12 @@ public class GameController : MonoBehaviour
         if(itemsOnSeekh.Capacity == 0)
         {
             showSad();
+            Invoke("showLoseScreen", 6f);
             return;
         }
 
         for(int i = 0; i < itemsOnSeekh.Capacity; i++)
         {
-            //foreach (string name in Enum.GetValues(typeof(listOfItems)))
-            //{
-            //    if (itemsOnSeekh[i].name.Contains(name))
-            //    {
-            //        if (stateOfFood.Equals("Cooked"))
-            //        {
-            //            showHappy();
-            //        }
-            //        else if (stateOfFood.Equals("Raw"))
-            //        {
-            //            showSick();
-            //        }
-            //        else if (stateOfFood.Equals("Smoke"))
-            //        {
-            //            showHappy();
-            //        }
-            //        else if (stateOfFood.Equals("Burnt"))
-            //        {
-            //            showSick();
-            //        }
-            //        return;
-            //    }
-            //}
-
             for(int j = 0; j < itemsInLevel.Capacity; j++)
             {
                 if (itemsOnSeekh[i].name.Contains(itemsInLevel[j]))
@@ -99,18 +89,22 @@ public class GameController : MonoBehaviour
                     if (stateOfFood.Equals("Cooked"))
                     {
                         showHappy();
+                        Invoke("showWinScreen", 6f);
                     }
                     else if (stateOfFood.Equals("Raw"))
                     {
                         showSick();
+                        Invoke("showLoseScreen", 6f);
                     }
                     else if (stateOfFood.Equals("Smoke"))
                     {
                         showHappy();
+                        Invoke("showWinScreen", 6f);
                     }
                     else if (stateOfFood.Equals("Burnt"))
                     {
                         showSick();
+                        Invoke("showLoseScreen", 6f);
                     }
                     return;
                 }
@@ -118,6 +112,7 @@ public class GameController : MonoBehaviour
         }
 
         showSad();
+        Invoke("showLoseScreen", 2f);
     }
 
     void sliderTimer()
@@ -150,5 +145,46 @@ public class GameController : MonoBehaviour
     {
         neutralEmoji.gameObject.SetActive(false);
         sickEmoji.gameObject.SetActive(true);
+    }
+
+    void showLoseScreen()
+    {
+        loseScreen.SetActive(true);
+    }
+
+    void showWinScreen()
+    {
+        winScreen.SetActive(true);
+    }
+
+    public void nextLevel()
+    {
+        Debug.Log("BUTTON PRESSD");
+        if(SceneManager.GetActiveScene().name == "Level 1")
+        {
+            SceneLoader.loadLevel2();
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 2")
+        {
+            SceneLoader.loadLevel3();
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 3")
+        {
+            SceneLoader.loadLevel4();
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 4")
+        {
+            SceneLoader.loadLevel5();
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 5")
+        {
+            SceneLoader.loadLevel1();
+        }
+
+    }
+
+    public void restartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
