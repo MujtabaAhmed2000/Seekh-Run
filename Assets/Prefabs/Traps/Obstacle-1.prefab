@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 9176689612574562504}
   - component: {fileID: 170250117039288182}
   - component: {fileID: 9072652580305313346}
+  - component: {fileID: 35115457042272383}
   m_Layer: 0
   m_Name: Obstacle-1.001
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,6 +83,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &35115457042272383
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579433238234926534}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2190477, y: 0.25190294, z: 0.77722996}
+  m_Center: {x: 0.58610433, y: -0.000010624528, z: -0.3462253}
 --- !u!1 &3642873572778662921
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,9 +189,10 @@ GameObject:
   - component: {fileID: 5361452438219559629}
   - component: {fileID: 7219059473481299757}
   - component: {fileID: 8584484811315111498}
+  - component: {fileID: 5225493633774353226}
   m_Layer: 0
   m_Name: Obstacle-1.002
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,6 +261,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5225493633774353226
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495937678065842616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.24972409, y: 0.25190294, z: 1.3414857}
+  m_Center: {x: 0.00009055063, y: -0.000010624528, z: 0.67074287}
 --- !u!1 &6430395123125109784
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,9 +285,10 @@ GameObject:
   - component: {fileID: 8455136037930754348}
   - component: {fileID: 1588177116047978245}
   - component: {fileID: 1347639657555643625}
+  - component: {fileID: 7382813066905435327}
   m_Layer: 0
   m_Name: Obstacle-1.006
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,6 +357,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7382813066905435327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6430395123125109784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2190474, y: 0.25190294, z: 0.7772308}
+  m_Center: {x: -0.585049, y: -0.000010624528, z: -0.34804997}
 --- !u!1 &6811985179304392963
 GameObject:
   m_ObjectHideFlags: 0
