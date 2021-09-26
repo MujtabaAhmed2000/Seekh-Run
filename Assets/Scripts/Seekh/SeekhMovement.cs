@@ -9,13 +9,16 @@ public class SeekhMovement : MonoBehaviour
     Touch touch;
     float rightLevelBoundary;
     float sensitivity = 25;
-    bool isControl = true;
+    bool isControl = false;
     bool isFinalAnimation = false;
     float finalAnimationTime = 2f;
     [SerializeField] Transform finalSkewerPlaceholder;
     [SerializeField] Transform mitten;
     [SerializeField] Transform skewer;
     [SerializeField] CameraFollow cameraFollow;
+
+    [SerializeField] GameObject uiSlider;
+    [SerializeField] GameObject uiHand;
     //float xRightBound;
 
     // Start is called before the first frame update
@@ -31,6 +34,13 @@ public class SeekhMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.touchCount > 0)
+        {
+            isControl = true;
+            uiSlider.SetActive(false);
+            uiHand.SetActive(false);
+        }
+
         if (isControl)
         {
             transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
