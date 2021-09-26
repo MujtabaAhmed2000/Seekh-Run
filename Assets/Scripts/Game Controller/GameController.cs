@@ -23,8 +23,11 @@ public class GameController : MonoBehaviour
     // CAN BE "Burnt" "Raw" "Cooked" "Smoke"
     String stateOfFood = null;
 
-    enum listOfItems { Cheese, Chicken, Donut, EclairChocolate, Muffin, Mushroom, Onion, Pepper, Pineapple, Salad, Sausage, Shrimp, SweetPepper, Tomato };
-    [SerializeField] List<listOfItems> itemsInLevel;
+    //[SerializeField] enum listOfItems { Cheese, Chicken, Donut, EclairChocolate, Muffin, Mushroom, Onion, Pepper, Pineapple, Salad, Sausage, Shrimp, SweetPepper, Tomato };
+
+    [Header("TYPE FROM ABOVE LIST")]
+    [Header("Cheese, Chicken, Donut, EclairChocolate, Muffin, Mushroom, Onion, Pepper, Pineapple, Salad, Sausage, Shrimp, SweetPepper, Tomato")]
+    [SerializeField] List<String> itemsInLevel;
 
     // Update is called once per frame
     void Update()
@@ -65,9 +68,33 @@ public class GameController : MonoBehaviour
 
         for(int i = 0; i < itemsOnSeekh.Capacity; i++)
         {
-            foreach (string name in Enum.GetValues(typeof(listOfItems)))
+            //foreach (string name in Enum.GetValues(typeof(listOfItems)))
+            //{
+            //    if (itemsOnSeekh[i].name.Contains(name))
+            //    {
+            //        if (stateOfFood.Equals("Cooked"))
+            //        {
+            //            showHappy();
+            //        }
+            //        else if (stateOfFood.Equals("Raw"))
+            //        {
+            //            showSick();
+            //        }
+            //        else if (stateOfFood.Equals("Smoke"))
+            //        {
+            //            showHappy();
+            //        }
+            //        else if (stateOfFood.Equals("Burnt"))
+            //        {
+            //            showSick();
+            //        }
+            //        return;
+            //    }
+            //}
+
+            for(int j = 0; j < itemsInLevel.Capacity; j++)
             {
-                if (itemsOnSeekh[i].name.Contains(name))
+                if (itemsOnSeekh[i].name.Contains(itemsInLevel[j]))
                 {
                     if (stateOfFood.Equals("Cooked"))
                     {
