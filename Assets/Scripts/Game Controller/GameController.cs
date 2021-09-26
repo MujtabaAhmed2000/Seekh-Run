@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     // CAN BE "Burnt" "Raw" "Cooked" "Smoke"
     String stateOfFood = null;
 
-    enum listOfItems { Tomato, Beef };
+    enum listOfItems { Cheese, Chicken, Donut, EclairChocolate, Muffin, Mushroom, Onion, Pepper, Pineapple, Salad, Sausage, Shrimp, SweetPepper, Tomato };
     [SerializeField] List<listOfItems> itemsInLevel;
 
     // Update is called once per frame
