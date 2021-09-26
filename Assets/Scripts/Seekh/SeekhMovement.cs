@@ -86,6 +86,7 @@ public class SeekhMovement : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         isFinalAnimation = false;
+
         moveToPlate();
     }
 

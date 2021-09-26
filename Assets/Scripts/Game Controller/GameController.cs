@@ -40,7 +40,6 @@ public class GameController : MonoBehaviour
                 CancelInvoke();
                 sliderIsMoving = false;
                 stateOfFood = sliderMovement.getCookState();
-                Debug.Log(stateOfFood);
                 StartCoroutine(seekhMovement.finalRotate());
                 Invoke("hideSlider", 1f);
             }

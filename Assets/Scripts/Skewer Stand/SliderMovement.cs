@@ -7,7 +7,7 @@ public class SliderMovement : MonoBehaviour
     [SerializeField] Transform slider;
 
     bool stop = false;
-    float speed = 1f;
+    float speed = 2.5f;
 
     // Update is called once per frame
     void Update()
@@ -15,7 +15,7 @@ public class SliderMovement : MonoBehaviour
         if (!stop)
         {
             slider.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
-            if(slider.position.x > 1.5)
+            if(slider.position.x > 3.6)
             {
                 stop = true;
             }
@@ -26,15 +26,15 @@ public class SliderMovement : MonoBehaviour
     {
         stop = true;
 
-        if (slider.position.x < -0.64)
+        if (slider.position.x < -1.4)
         {
             return "Raw";
         }
-        else if(slider.position.x < 0.6)
+        else if(slider.position.x < 1.49)
         {
             return "Cooked";
         }
-        else if(slider.position.x < 1.5)
+        else if(slider.position.x < 3.5)
         {
             return "Smoke";
         }
