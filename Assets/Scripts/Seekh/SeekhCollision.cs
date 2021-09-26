@@ -22,7 +22,6 @@ public class SeekhCollision : MonoBehaviour
 
             seekhInfo.addItemOnSeekh(other.gameObject);
 
-            //other.gameObject.GetComponent<FoodCollect>().attachToSkewer(zPositionOnSeekh, transform);
             other.gameObject.GetComponent<FoodCollect>().attachToSkewer(zPositionOnSeekh, itemPositions[position].transform);
 
             zPositionOnSeekh -= gapBetweenItems;
@@ -36,8 +35,6 @@ public class SeekhCollision : MonoBehaviour
             item.GetComponent<FoodCollect>().detachFromSkewer();
             item.GetComponent<FoodInfo>().flingItemUp();
 
-            //seekhMovement.shakeSeekh();
-
             zPositionOnSeekh += gapBetweenItems;
         }
 
@@ -46,7 +43,6 @@ public class SeekhCollision : MonoBehaviour
             Debug.Log("FINISHED");
             seekhMovement.setIsControl(false);
             seekhRotation.setIsControl(false);
-            //seekhRotation.finalAnimation();
             seekhMovement.finalAnimation();
         }
     }
