@@ -7,6 +7,10 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [SerializeField] SeekhInfo seekhInfo;
+    [SerializeField] SeekhMovement seekhMovement;
+    [SerializeField] SliderMovement sliderMovement;
+    Touch touch;
+
     enum listOfItems { Tomato, Beef };
     [SerializeField] List<listOfItems> itemsInLevel;
     // Start is called before the first frame update
@@ -18,7 +22,20 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (seekhMovement.getIsFinalAnimation())
+        {
+            sliderMovement.setEnabled(true);
+
+            if(Input.touchCount > 0)
+            {
+                touch = Input.GetTouch(0);
+                if (touch.phase == TouchPhase.Ended)
+                {
+                    Debug.Log(sliderMovement.getCookState());
+                    StartCoroutine(seekhMovement.finalRotate());
+                }
+            }
+        }
     }
 
     public void checkWin()
