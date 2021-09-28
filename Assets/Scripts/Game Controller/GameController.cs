@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 [ExecuteInEditMode]
 public class GameController : MonoBehaviour
@@ -19,9 +20,10 @@ public class GameController : MonoBehaviour
     [SerializeField] Transform sickEmoji;
 
     [Header("UI")]
-    [SerializeField] GameObject levelCounter;
+    [SerializeField] TMP_Text levelCounter;
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
+    float timeForShowScreen = 4f;
 
     Touch touch;
     bool sliderIsMoving = false;
@@ -36,10 +38,9 @@ public class GameController : MonoBehaviour
     [Header("Cheese, Chicken, Donut, EclairChocolate, Muffin, Mushroom, Onion, Pepper, Pineapple, Salad, Sausage, Shrimp, SweetPepper, Tomato")]
     [SerializeField] List<String> itemsInLevel;
 
-    private void Start()
+    private void Awake()
     {
-        //levelCounter.GetComponent<Text>().text = SceneManager.GetActiveScene().name;
-        Debug.Log(SceneManager.GetActiveScene().name);
+        levelCounter.text = SceneManager.GetActiveScene().name.ToString();
     }
 
     // Update is called once per frame
@@ -76,7 +77,7 @@ public class GameController : MonoBehaviour
         if(itemsOnSeekh.Capacity == 0)
         {
             showSad();
-            Invoke("showLoseScreen", 6f);
+            Invoke("showLoseScreen", timeForShowScreen);
             return;
         }
 
@@ -89,22 +90,22 @@ public class GameController : MonoBehaviour
                     if (stateOfFood.Equals("Cooked"))
                     {
                         showHappy();
-                        Invoke("showWinScreen", 6f);
+                        Invoke("showWinScreen", timeForShowScreen);
                     }
                     else if (stateOfFood.Equals("Raw"))
                     {
                         showSick();
-                        Invoke("showLoseScreen", 6f);
+                        Invoke("showLoseScreen", timeForShowScreen);
                     }
                     else if (stateOfFood.Equals("Smoke"))
                     {
                         showHappy();
-                        Invoke("showWinScreen", 6f);
+                        Invoke("showWinScreen", timeForShowScreen);
                     }
                     else if (stateOfFood.Equals("Burnt"))
                     {
                         showSick();
-                        Invoke("showLoseScreen", 6f);
+                        Invoke("showLoseScreen", timeForShowScreen);
                     }
                     return;
                 }
@@ -112,7 +113,7 @@ public class GameController : MonoBehaviour
         }
 
         showSad();
-        Invoke("showLoseScreen", 2f);
+        Invoke("showLoseScreen", timeForShowScreen);
     }
 
     void sliderTimer()

@@ -19172,8 +19172,10 @@ MonoBehaviour:
   speed: 15
   finalSkewerPlaceholder: {fileID: 0}
   mitten: {fileID: 8444336514754778805}
-  skewer: {fileID: 0}
+  skewer: {fileID: 1095185299881397092}
   cameraFollow: {fileID: 0}
+  uiSlider: {fileID: 0}
+  uiHand: {fileID: 0}
 --- !u!114 &-6725787191350395172
 MonoBehaviour:
   m_ObjectHideFlags: 0
