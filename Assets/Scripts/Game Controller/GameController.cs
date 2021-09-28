@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour
     [SerializeField] Transform sickEmoji;
 
     [Header("UI")]
+    //[SerializeField] GameObject currentLevelItemsUI;
+    [SerializeField] List<GameObject> itemCounterUI;
     [SerializeField] TMP_Text levelCounter;
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
@@ -42,9 +44,14 @@ public class GameController : MonoBehaviour
     [Header("Cheese, Chicken, Donut, EclairChocolate, Muffin, Mushroom, Onion, Pepper, Pineapple, Salad, Sausage, Shrimp, SweetPepper, Tomato")]
     [SerializeField] List<String> itemsInLevel;
 
-    private void Awake()
+    private void Start()
     {
         levelCounter.text = SceneManager.GetActiveScene().name.ToString();
+
+        //foreach(Transform child in currentLevelItemsUI.transform)
+        //{
+        //    itemCounterUI.Add(child.gameObject);
+        //}
     }
 
     // Update is called once per frame
@@ -90,11 +97,12 @@ public class GameController : MonoBehaviour
         {
             for(int j = 0; j < itemsInLevel.Capacity; j++)
             {
-                if (itemsOnSeekh[i].name.Contains(itemsInLevel[j]))
+                if (itemsOnSeekh[i].name.StartsWith(itemsInLevel[j]))
                 {
+                    seekhInfo.enableEndingParticleEffect(stateOfFood);
                     if (stateOfFood.Equals("Cooked"))
                     {
-                        Debug.Log("PASSED");
+                        Debug.Log("COOKED");
                         showHappy();
                         Invoke("showWinScreen", timeForShowScreen);
                     }
@@ -121,7 +129,8 @@ public class GameController : MonoBehaviour
             }
         }
 
-        Debug.Log("EDN CASE");
+        seekhInfo.enableEndingParticleEffect(stateOfFood);
+        Debug.Log("END CASE");
         showSad();
         Invoke("showLoseScreen", timeForShowScreen);
     }
@@ -201,5 +210,22 @@ public class GameController : MonoBehaviour
     public void hideStartScreen()
     {
         startScreen.SetActive(false);
+    }
+
+    public void checkIfItemAddedIsRequired(GameObject item)
+    {
+        foreach(String food in itemsInLevel)
+        {
+            if (food.StartsWith(item.name))
+            {
+                foreach(GameObject counter in itemCounterUI)
+                {
+                    if (food.Equals(counter.name))
+                    {
+                        //INCREMENT COUNT BY 1
+                    }
+                }
+            }
+        }
     }
 }
