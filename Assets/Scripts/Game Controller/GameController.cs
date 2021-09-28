@@ -9,11 +9,13 @@ using TMPro;
 [ExecuteInEditMode]
 public class GameController : MonoBehaviour
 {
+    [Header("SCRIPTS")]
     [SerializeField] SeekhInfo seekhInfo;
     [SerializeField] SeekhMovement seekhMovement;
     [SerializeField] SliderMovement sliderMovement;
     [SerializeField] CameraFollow cameraFollow;
 
+    [Header("END EMOJIS")]
     [SerializeField] Transform neutralEmoji;
     [SerializeField] Transform sadEmoji;
     [SerializeField] Transform happyEmoji;
@@ -23,6 +25,8 @@ public class GameController : MonoBehaviour
     [SerializeField] TMP_Text levelCounter;
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
+    [SerializeField] GameObject startScreen;
+
     float timeForShowScreen = 6f;
 
     Touch touch;
@@ -192,5 +196,10 @@ public class GameController : MonoBehaviour
     public void restartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void hideStartScreen()
+    {
+        startScreen.SetActive(false);
     }
 }

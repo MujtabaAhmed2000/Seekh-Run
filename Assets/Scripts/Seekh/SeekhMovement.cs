@@ -5,6 +5,9 @@ using DG.Tweening;
 
 public class SeekhMovement : MonoBehaviour
 {
+    [SerializeField] GameController gameController;
+    [SerializeField] CameraFollow cameraFollow;
+    [SerializeField] Transform finalSkewerPlaceholder;
     [SerializeField] float speed;
     Touch touch;
     float rightLevelBoundary;
@@ -13,21 +16,13 @@ public class SeekhMovement : MonoBehaviour
     bool isFinalAnimation = false;
     bool isUiSlider = true;
     float finalAnimationTime = 2f;
-    [SerializeField] Transform finalSkewerPlaceholder;
     [SerializeField] Transform mitten;
     [SerializeField] Transform skewer;
-    [SerializeField] CameraFollow cameraFollow;
 
-    [SerializeField] GameObject uiSlider;
-    [SerializeField] GameObject uiHand;
-    //float xRightBound;
 
     // Start is called before the first frame update
     void Start()
     {
-        //FOR TESTING PURPOSE USE 1440 OTHERWISE USE SCREEN.WIDTH
-        //xRightBound = Screen.width / 2;
-
         //WIDTH OF LEVEL IS 4.8
         rightLevelBoundary = 4.8f;
     }
@@ -40,8 +35,7 @@ public class SeekhMovement : MonoBehaviour
         {
             isUiSlider = false;
             isControl = true;
-            uiSlider.SetActive(false);
-            uiHand.SetActive(false);
+            gameController.hideStartScreen();
         }
 
         //TO MAKE SEEKH MOVE FORWARD

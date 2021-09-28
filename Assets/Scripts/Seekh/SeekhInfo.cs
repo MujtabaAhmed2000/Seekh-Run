@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class SeekhInfo : MonoBehaviour
 {
-    public static SeekhInfo seekhInfoInstance;
     [SerializeField] List<GameObject> itemsOnSeekh;
 
-    // Start is called before the first frame update
     void Start()
     {
         itemsOnSeekh = new List<GameObject>();

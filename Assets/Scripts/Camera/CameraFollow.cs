@@ -14,6 +14,9 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] Vector3 plateOffset;
     [SerializeField] Vector3 plateRotation;
 
+    float finalAnimTime = 2f;
+    float plateAnimTime = 1.5f;
+
     // Update is called once per frame
     void Update()
     {
@@ -30,16 +33,22 @@ public class CameraFollow : MonoBehaviour
 
     public void finalAnimationPosition()
     {
-        gameObject.GetComponent<Camera>().DOFieldOfView(75, 2f);
+        gameObject.GetComponent<Camera>().DOFieldOfView(75, finalAnimTime);
         isFollowing = false;
-        transform.DOMove(target.position + finalAnimOffset, 2f);
-        transform.DORotate(finalAnimeRotation, 2f);
+        transform.DOMoveX(0, finalAnimTime);
+        transform.DOMoveY(target.position.y + finalAnimOffset.y, finalAnimTime);
+        transform.DOMoveZ(target.position.z + finalAnimOffset.z, finalAnimTime);
+        //transform.DOMove(target.position + finalAnimOffset, finalAnimTime);
+        transform.DORotate(finalAnimeRotation, finalAnimTime);
     }
 
     public void platePosition()
     {
-        gameObject.GetComponent<Camera>().DOFieldOfView(90, 1.5f);
-        transform.DOMove(target.position + plateOffset, 1.5f);
-        transform.DORotate(plateRotation, 1.5f);
+        gameObject.GetComponent<Camera>().DOFieldOfView(90, plateAnimTime);
+        transform.DOMoveX(0, plateAnimTime);
+        transform.DOMoveY(target.position.y + plateOffset.y, plateAnimTime);
+        transform.DOMoveZ(target.position.z + plateOffset.z, plateAnimTime);
+        //transform.DOMove(target.position + plateOffset, plateAnimTime);
+        transform.DORotate(plateRotation, plateAnimTime);
     }
 }
