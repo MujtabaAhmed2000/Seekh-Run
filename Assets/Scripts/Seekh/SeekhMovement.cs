@@ -11,6 +11,7 @@ public class SeekhMovement : MonoBehaviour
     float sensitivity = 25;
     bool isControl = false;
     bool isFinalAnimation = false;
+    bool isUiSlider = true;
     float finalAnimationTime = 2f;
     [SerializeField] Transform finalSkewerPlaceholder;
     [SerializeField] Transform mitten;
@@ -34,18 +35,22 @@ public class SeekhMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.touchCount > 0)
+        //DETECTING FIRST TOUCH AND DISABLING THE UI SLIDER AND START THE LEVEL
+        if(Input.touchCount > 0 && isUiSlider)
         {
+            isUiSlider = false;
             isControl = true;
             uiSlider.SetActive(false);
             uiHand.SetActive(false);
         }
 
+        //TO MAKE SEEKH MOVE FORWARD
         if (isControl)
         {
             transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
         }
 
+        //TO MAKE SEEKH MOVE LEFT RIGHT
         if(Input.touchCount > 0 && isControl)
         {
             touch = Input.GetTouch(0);

@@ -44,4 +44,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seekhInfo: {fileID: 0}
+  seekhMovement: {fileID: 0}
+  sliderMovement: {fileID: 0}
+  cameraFollow: {fileID: 0}
+  neutralEmoji: {fileID: 0}
+  sadEmoji: {fileID: 0}
+  happyEmoji: {fileID: 0}
+  sickEmoji: {fileID: 0}
+  levelCounter: {fileID: 0}
+  winScreen: {fileID: 0}
+  loseScreen: {fileID: 0}
   itemsInLevel: []

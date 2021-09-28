@@ -62,6 +62,7 @@ public class GameController : MonoBehaviour
                 CancelInvoke();
                 sliderIsMoving = false;
                 stateOfFood = sliderMovement.getCookState();
+                Debug.Log(stateOfFood);
                 StartCoroutine(seekhMovement.finalRotate());
                 Invoke("hideSlider", 1f);
             }
@@ -160,7 +161,6 @@ public class GameController : MonoBehaviour
 
     public void nextLevel()
     {
-        Debug.Log("BUTTON PRESSD");
         if(SceneManager.GetActiveScene().name == "Level 1")
         {
             SceneLoader.loadLevel2();

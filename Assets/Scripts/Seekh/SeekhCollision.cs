@@ -40,7 +40,6 @@ public class SeekhCollision : MonoBehaviour
 
         else if(other.gameObject.tag == "Finish")
         {
-            Debug.Log("FINISHED");
             seekhMovement.setIsControl(false);
             seekhRotation.setIsControl(false);
             seekhMovement.finalAnimation();
