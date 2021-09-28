@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     [SerializeField] TMP_Text levelCounter;
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
-    float timeForShowScreen = 4f;
+    float timeForShowScreen = 6f;
 
     Touch touch;
     bool sliderIsMoving = false;
@@ -62,7 +62,6 @@ public class GameController : MonoBehaviour
                 CancelInvoke();
                 sliderIsMoving = false;
                 stateOfFood = sliderMovement.getCookState();
-                Debug.Log(stateOfFood);
                 StartCoroutine(seekhMovement.finalRotate());
                 Invoke("hideSlider", 1f);
             }
@@ -77,6 +76,7 @@ public class GameController : MonoBehaviour
 
         if(itemsOnSeekh.Capacity == 0)
         {
+            Debug.Log("SEEKH EMPTY");
             showSad();
             Invoke("showLoseScreen", timeForShowScreen);
             return;
@@ -90,21 +90,25 @@ public class GameController : MonoBehaviour
                 {
                     if (stateOfFood.Equals("Cooked"))
                     {
+                        Debug.Log("PASSED");
                         showHappy();
                         Invoke("showWinScreen", timeForShowScreen);
                     }
                     else if (stateOfFood.Equals("Raw"))
                     {
+                        Debug.Log("RAW");
                         showSick();
                         Invoke("showLoseScreen", timeForShowScreen);
                     }
                     else if (stateOfFood.Equals("Smoke"))
                     {
+                        Debug.Log("SMOKED");
                         showHappy();
                         Invoke("showWinScreen", timeForShowScreen);
                     }
                     else if (stateOfFood.Equals("Burnt"))
                     {
+                        Debug.Log("BURNT");
                         showSick();
                         Invoke("showLoseScreen", timeForShowScreen);
                     }
@@ -113,6 +117,7 @@ public class GameController : MonoBehaviour
             }
         }
 
+        Debug.Log("EDN CASE");
         showSad();
         Invoke("showLoseScreen", timeForShowScreen);
     }
