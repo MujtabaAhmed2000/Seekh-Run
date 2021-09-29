@@ -805,7 +805,7 @@ PrefabInstance:
     - target: {fileID: 8814247693110427664, guid: fb0e892c4cdbf3849879ce2512f80891,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb0e892c4cdbf3849879ce2512f80891, type: 3}
@@ -848,6 +848,36 @@ GameObject:
 --- !u!1 &350909614 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6345201552803413871, guid: fb0e892c4cdbf3849879ce2512f80891,
+    type: 3}
+  m_PrefabInstance: {fileID: 350909608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &350909615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8814247692793733823, guid: fb0e892c4cdbf3849879ce2512f80891,
+    type: 3}
+  m_PrefabInstance: {fileID: 350909608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &350909616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8814247692978609458, guid: fb0e892c4cdbf3849879ce2512f80891,
+    type: 3}
+  m_PrefabInstance: {fileID: 350909608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &350909617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8814247694113565118, guid: fb0e892c4cdbf3849879ce2512f80891,
+    type: 3}
+  m_PrefabInstance: {fileID: 350909608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &350909618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8814247693110427664, guid: fb0e892c4cdbf3849879ce2512f80891,
+    type: 3}
+  m_PrefabInstance: {fileID: 350909608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &350909619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8814247694160567821, guid: fb0e892c4cdbf3849879ce2512f80891,
     type: 3}
   m_PrefabInstance: {fileID: 350909608}
   m_PrefabAsset: {fileID: 0}
@@ -1354,9 +1384,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
         type: 3}
+      propertyPath: levelOne
+      value: 
+      objectReference: {fileID: 350909619}
+    - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
+        type: 3}
+      propertyPath: levelTwo
+      value: 
+      objectReference: {fileID: 350909618}
+    - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
+        type: 3}
       propertyPath: sadEmoji
       value: 
       objectReference: {fileID: 846889679}
+    - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
+        type: 3}
+      propertyPath: levelFive
+      value: 
+      objectReference: {fileID: 350909615}
+    - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
+        type: 3}
+      propertyPath: levelFour
+      value: 
+      objectReference: {fileID: 350909616}
     - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
         type: 3}
       propertyPath: m_Enabled
@@ -1382,6 +1432,11 @@ PrefabInstance:
       propertyPath: happyEmoji
       value: 
       objectReference: {fileID: 846889677}
+    - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
+        type: 3}
+      propertyPath: levelThree
+      value: 
+      objectReference: {fileID: 350909617}
     - target: {fileID: 8832838995663329263, guid: 16e7f5019f4b3ff4e8f24c04138679b3,
         type: 3}
       propertyPath: loseScreen

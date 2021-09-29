@@ -26,6 +26,11 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
     [SerializeField] GameObject startScreen;
+    [SerializeField] GameObject levelOne;
+    [SerializeField] GameObject levelTwo;
+    [SerializeField] GameObject levelThree;
+    [SerializeField] GameObject levelFour;
+    [SerializeField] GameObject levelFive;
 
     float timeForShowScreen = 6f;
 
@@ -190,7 +195,6 @@ public class GameController : MonoBehaviour
         {
             SceneLoader.loadLevel1();
         }
-
     }
 
     public void restartLevel()
@@ -201,5 +205,30 @@ public class GameController : MonoBehaviour
     public void hideStartScreen()
     {
         startScreen.SetActive(false);
+        levelObjectives();
+    }
+
+    public void levelObjectives()
+    {
+        if (SceneManager.GetActiveScene().name == "Level 1")
+        {
+            levelOne.SetActive(true);
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 2")
+        {
+            levelTwo.SetActive(true);
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 3")
+        {
+            levelThree.SetActive(true);
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 4")
+        {
+            levelFour.SetActive(true);
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 5")
+        {
+            levelFive.SetActive(true);
+        }
     }
 }
