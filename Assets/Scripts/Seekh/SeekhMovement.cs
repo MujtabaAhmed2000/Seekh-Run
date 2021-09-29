@@ -91,7 +91,7 @@ public class SeekhMovement : MonoBehaviour
     {
         for(int i = 0; i < 360; i++)
         {
-            skewer.Rotate(new Vector3(0, 0, -1));
+            skewer.Rotate(new Vector3(0, 0, -2));
 
             yield return new WaitForSeconds(0.01f);
         }
