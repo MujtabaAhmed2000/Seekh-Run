@@ -9,6 +9,7 @@ public class SeekhMovement : MonoBehaviour
     [SerializeField] CameraFollow cameraFollow;
     [SerializeField] Transform finalSkewerPlaceholder;
     [SerializeField] float speed;
+
     Touch touch;
     float rightLevelBoundary;
     float sensitivity = 25;
@@ -110,5 +111,6 @@ public class SeekhMovement : MonoBehaviour
         cameraFollow.platePosition();
         Vector3 offset = new Vector3(0, -1f, 15);
         transform.DOMove(transform.position + offset, 1.5f);
+
     }
 }

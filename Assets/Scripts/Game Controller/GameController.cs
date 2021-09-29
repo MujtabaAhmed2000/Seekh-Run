@@ -35,8 +35,6 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject levelFive;
 
     [Header("Sounds")]
-    //[SerializeField] AudioSource BackgroundMusic;
-    //[SerializeField] AudioClip BGMusic;
     [Header("Mute Button")]
     [SerializeField] AudioSource MuteSound;
     [SerializeField] AudioClip MuteButton;
@@ -52,8 +50,14 @@ public class GameController : MonoBehaviour
     [Header("Retry Button")]
     [SerializeField] AudioSource RetrySound;
     [SerializeField] AudioClip RetryButton;
+    [Header("Camera Sound")]
+    [SerializeField] AudioSource BGM;
 
-    float timeForShowScreen = 4f;
+    [Header("Confetti")]
+    [SerializeField] GameObject ConfettiLeft;
+    [SerializeField] GameObject ConfettiRight;
+
+    float timeForShowScreen = 2f;
 
     // For Settings Button
     bool isMuted;
@@ -167,7 +171,8 @@ public class GameController : MonoBehaviour
     void hideSlider()
     {
         sliderMovement.setEnabled(false);
-        Invoke("checkWin", 3f);
+        Invoke("checkWin", 7f);
+
     } 
 
     void showHappy()
@@ -186,11 +191,15 @@ public class GameController : MonoBehaviour
     {
         neutralEmoji.gameObject.SetActive(false);
         hearteyesEmoji.gameObject.SetActive(true);
+        ConfettiLeft.SetActive(true);
+        ConfettiRight.SetActive(true);
     }
 
     public void showLoseScreen()
     {
+        BGM.Stop();
         loseScreen.SetActive(true);
+
     }
 
     void showWinScreen()
