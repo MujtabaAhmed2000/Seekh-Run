@@ -48,7 +48,6 @@ GameObject:
   - component: {fileID: 614405260235806859}
   - component: {fileID: 6048384900265238576}
   - component: {fileID: 3970228811696944550}
-  - component: {fileID: 1194516974776868097}
   m_Layer: 5
   m_Name: LosingScreen
   m_TagString: Untagged
@@ -106,7 +105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e22218e2799152b4daabf2d943652962, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -116,22 +115,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!111 &1194516974776868097
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7331255046761708833}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b8b332e2aee1a8a4e822db01beff79f3, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: b8b332e2aee1a8a4e822db01beff79f3, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &7416069468230853919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,7 +2272,6 @@ GameObject:
   - component: {fileID: 8814247693245250515}
   - component: {fileID: 8814247693245250508}
   - component: {fileID: 8814247693245250509}
-  - component: {fileID: 8814247693245250514}
   - component: {fileID: 7239630356765831819}
   m_Layer: 5
   m_Name: WinScreen
@@ -2297,7 +2279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8814247693245250515
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2348,7 +2330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aa5bf03d6294cd34c90641dbe492a8bb, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2358,22 +2340,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!111 &8814247693245250514
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8814247693245250512}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b8b332e2aee1a8a4e822db01beff79f3, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: b8b332e2aee1a8a4e822db01beff79f3, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!82 &7239630356765831819
 AudioSource:
   m_ObjectHideFlags: 0

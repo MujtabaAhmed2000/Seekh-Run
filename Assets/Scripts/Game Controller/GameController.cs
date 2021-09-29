@@ -32,7 +32,29 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject levelFour;
     [SerializeField] GameObject levelFive;
 
+    [Header("Sounds")]
+    //[SerializeField] AudioSource BackgroundMusic;
+    //[SerializeField] AudioClip BGMusic;
+    [Header("Mute Button")]
+    [SerializeField] AudioSource MuteSound;
+    [SerializeField] AudioClip MuteButton;
+    [Header("unMute Button")]
+    [SerializeField] AudioSource unMuteSound;
+    [SerializeField] AudioClip unMuteButton;
+    [Header("Settings Button")]
+    [SerializeField] AudioSource SettingsSound;
+    [SerializeField] AudioClip SettingsButton;
+    [Header("Next Button")]
+    [SerializeField] AudioSource NextSound;
+    [SerializeField] AudioClip NextButton;
+    [Header("Retry Button")]
+    [SerializeField] AudioSource RetrySound;
+    [SerializeField] AudioClip RetryButton;
+
     float timeForShowScreen = 6f;
+
+    // For Settings Button
+    bool isMuted;
 
     Touch touch;
     bool sliderIsMoving = false;
@@ -175,7 +197,9 @@ public class GameController : MonoBehaviour
 
     public void nextLevel()
     {
-        if(SceneManager.GetActiveScene().name == "Level 1")
+        NextSound.clip = NextButton;
+        NextSound.PlayOneShot(NextSound.clip);
+        if (SceneManager.GetActiveScene().name == "Level 1")
         {
             SceneLoader.loadLevel2();
         }
@@ -199,6 +223,8 @@ public class GameController : MonoBehaviour
 
     public void restartLevel()
     {
+        RetrySound.clip = RetryButton;
+        RetrySound.PlayOneShot(RetrySound.clip);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -230,5 +256,24 @@ public class GameController : MonoBehaviour
         {
             levelFive.SetActive(true);
         }
+    }
+    
+    public void Mute()
+    {
+        MuteSound.clip = MuteButton;
+        MuteSound.PlayOneShot(MuteSound.clip);
+        AudioListener.volume = 0f;
+    }
+    public void unMute()
+    {
+        unMuteSound.clip = unMuteButton;
+        unMuteSound.PlayOneShot(unMuteSound.clip);
+        AudioListener.volume = 1f;
+    }
+
+    public void Settings()
+    {
+        SettingsSound.clip = SettingsButton;
+        SettingsSound.PlayOneShot(SettingsSound.clip);
     }
 }
