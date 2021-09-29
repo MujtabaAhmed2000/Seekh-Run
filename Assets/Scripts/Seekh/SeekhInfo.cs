@@ -24,11 +24,11 @@ public class SeekhInfo : MonoBehaviour
         gameController.checkIfItemAddedIsRequired(item);
     }
 
-    public void RemoveItemOnSeekh(GameObject item)
-    {
-        itemsOnSeekh.Remove(item);
-        gameController.checkIfItemRemovedIsRequired(item);
-    }
+    //public void RemoveItemOnSeekh(GameObject item)
+    //{
+    //    itemsOnSeekh.Remove(item);
+    //    gameController.checkIfItemRemovedIsRequired(item);
+    //}
 
     public int getNumberOfItemsOnSeekh()
     {
@@ -38,6 +38,7 @@ public class SeekhInfo : MonoBehaviour
     public GameObject removeTopItemOnSeekh()
     {
         GameObject temp = itemsOnSeekh[itemsOnSeekh.Count - 1];
+        gameController.checkIfItemRemovedIsRequired(temp);
         itemsOnSeekh.RemoveAt(itemsOnSeekh.Count - 1);
         return temp;
     }
