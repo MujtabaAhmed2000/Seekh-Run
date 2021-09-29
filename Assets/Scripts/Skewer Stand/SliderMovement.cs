@@ -15,11 +15,11 @@ public class SliderMovement : MonoBehaviour
         if (!stop)
         {
             slider.Translate(new Vector3(speed, 0, 0));
-            if(slider.anchoredPosition.x > 480)
+            if(slider.anchoredPosition.x > 350)
             {
                 speed *= -1;
             }
-            if(slider.anchoredPosition.x < -480)
+            if(slider.anchoredPosition.x < -350)
             {
                 speed *= -1;
             }
@@ -30,11 +30,11 @@ public class SliderMovement : MonoBehaviour
     {
         stop = true;
 
-        if(slider.anchoredPosition.x < -365 || slider.anchoredPosition.x > 365)
+        if(slider.anchoredPosition.x < -265 || slider.anchoredPosition.x > 265)
         {
             return "Burnt";
         }
-        else if(slider.anchoredPosition.x < -110 || slider.anchoredPosition.x > 145)
+        else if(slider.anchoredPosition.x < -75 || slider.anchoredPosition.x > 110)
         {
             return "Smoke";
         }

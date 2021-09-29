@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7071545913299056639
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2760,6 +2760,7 @@ GameObject:
   - component: {fileID: 8814247693245250508}
   - component: {fileID: 8814247693245250509}
   - component: {fileID: 7239630356765831819}
+  - component: {fileID: 8814247693245250514}
   m_Layer: 5
   m_Name: WinScreen
   m_TagString: Untagged
@@ -2827,22 +2828,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!111 &8814247693245250514
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8814247693245250512}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b8b332e2aee1a8a4e822db01beff79f3, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: b8b332e2aee1a8a4e822db01beff79f3, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!82 &7239630356765831819
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2939,6 +2924,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!111 &8814247693245250514
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814247693245250512}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b8b332e2aee1a8a4e822db01beff79f3, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: b8b332e2aee1a8a4e822db01beff79f3, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &8814247693407116218
 GameObject:
   m_ObjectHideFlags: 0

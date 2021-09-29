@@ -9,6 +9,7 @@ public class SeekhCollision : MonoBehaviour
     [SerializeField] List<GameObject> itemPositions;
     [SerializeField] SeekhMovement seekhMovement;
     [SerializeField] SeekhRotation seekhRotation;
+    [SerializeField] GameController gameController;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -44,6 +45,14 @@ public class SeekhCollision : MonoBehaviour
 
         else if(other.gameObject.tag == "Finish")
         {
+            //IF SEEKH EMPTY SHOW LOSE SCREEN
+            if(seekhInfo.getNumberOfItemsOnSeekh() == 0)
+            {
+                seekhMovement.setIsControl(false);
+                gameController.showLoseScreen();
+                return;
+            }
+
             seekhMovement.setIsControl(false);
             seekhRotation.setIsControl(false);
             seekhMovement.finalAnimation();

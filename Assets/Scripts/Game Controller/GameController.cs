@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Transform neutralEmoji;
     [SerializeField] Transform sadEmoji;
     [SerializeField] Transform happyEmoji;
-    [SerializeField] Transform sickEmoji;
+    [SerializeField] Transform hearteyesEmoji;
 
     [Header("UI")]
     //[SerializeField] GameObject currentLevelItemsUI;
@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
     [SerializeField] AudioSource RetrySound;
     [SerializeField] AudioClip RetryButton;
 
-    float timeForShowScreen = 6f;
+    float timeForShowScreen = 4f;
 
     // For Settings Button
     bool isMuted;
@@ -89,7 +89,7 @@ public class GameController : MonoBehaviour
             sliderMovementFlag = false;
             sliderMovement.setEnabled(true);
             sliderIsMoving = true;
-            Invoke("sliderTimer", 3f);
+            //Invoke("sliderTimer", 3f);
         }
 
         if (Input.touchCount > 0 && sliderIsMoving)
@@ -130,14 +130,8 @@ public class GameController : MonoBehaviour
                     if (stateOfFood.Equals("Cooked"))
                     {
                         Debug.Log("COOKED");
-                        showHappy();
+                        showHearteyes();
                         Invoke("showWinScreen", timeForShowScreen);
-                    }
-                    else if (stateOfFood.Equals("Raw"))
-                    {
-                        Debug.Log("RAW");
-                        showSick();
-                        Invoke("showLoseScreen", timeForShowScreen);
                     }
                     else if (stateOfFood.Equals("Smoke"))
                     {
@@ -148,7 +142,7 @@ public class GameController : MonoBehaviour
                     else if (stateOfFood.Equals("Burnt"))
                     {
                         Debug.Log("BURNT");
-                        showSick();
+                        showSad();
                         Invoke("showLoseScreen", timeForShowScreen);
                     }
                     return;
@@ -173,7 +167,7 @@ public class GameController : MonoBehaviour
     void hideSlider()
     {
         sliderMovement.setEnabled(false);
-        Invoke("checkWin", 2f);
+        Invoke("checkWin", 3f);
     } 
 
     void showHappy()
@@ -188,13 +182,13 @@ public class GameController : MonoBehaviour
         sadEmoji.gameObject.SetActive(true);
     }
 
-    void showSick()
+    void showHearteyes()
     {
         neutralEmoji.gameObject.SetActive(false);
-        sickEmoji.gameObject.SetActive(true);
+        hearteyesEmoji.gameObject.SetActive(true);
     }
 
-    void showLoseScreen()
+    public void showLoseScreen()
     {
         loseScreen.SetActive(true);
     }
