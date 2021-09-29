@@ -89,9 +89,9 @@ public class SeekhMovement : MonoBehaviour
 
     public IEnumerator finalRotate()
     {
-        for(int i = 0; i < 360; i++)
+        for(int i = 0; i < 180; i++)
         {
-            skewer.Rotate(new Vector3(0, 0, -1));
+            skewer.Rotate(new Vector3(0, 0, -2));
 
             yield return new WaitForSeconds(0.005f);
         }
