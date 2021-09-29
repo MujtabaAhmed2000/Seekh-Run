@@ -284,15 +284,17 @@ public class GameController : MonoBehaviour
     {
         foreach(String food in itemsInLevel)
         {
-            if (food.StartsWith(item.name))
+            if (item.name.StartsWith(food))
             {
                 foreach(GameObject counter in itemCounterUI)
                 {
-                    if (food.Equals(counter.name))
+                    if (food.StartsWith(counter.name))
                     {
-                        TMP_Text text = counter.GetComponentInChildren<TMP_Text>();
-                        int currCount = int.Parse(text.text);
-                        text.text = currCount++.ToString();
+                        TMP_Text textCounter = counter.GetComponentsInChildren<TMP_Text>()[0];
+                        int currCount = int.Parse(textCounter.text);
+                        currCount++;
+                        textCounter.text = currCount.ToString();
+                        return;
                     }
                 }
             }
@@ -303,15 +305,17 @@ public class GameController : MonoBehaviour
     {
         foreach (String food in itemsInLevel)
         {
-            if (food.StartsWith(item.name))
+            if (item.name.StartsWith(food))
             {
                 foreach (GameObject counter in itemCounterUI)
                 {
-                    if (food.Equals(counter.name))
+                    if (food.StartsWith(counter.name))
                     {
-                        TMP_Text text = counter.GetComponentInChildren<TMP_Text>();
-                        int currCount = int.Parse(text.text);
-                        text.text = currCount--.ToString();
+                        TMP_Text textCounter = counter.GetComponentsInChildren<TMP_Text>()[0];
+                        int currCount = int.Parse(textCounter.text);
+                        currCount--;
+                        textCounter.text = currCount.ToString();
+                        return;
                     }
                 }
             }
