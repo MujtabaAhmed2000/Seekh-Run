@@ -750,6 +750,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1049800426}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &344436459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3023322942797539951, guid: e076463502ca5f8449dd03ac0563863d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6027926957285371467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &430805485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2402,6 +2408,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1451634037}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1628653563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3023322943875265179, guid: e076463502ca5f8449dd03ac0563863d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6027926957285371467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1635865600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2844,6 +2856,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1541698228}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1993713604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3023322941925385460, guid: e076463502ca5f8449dd03ac0563863d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6027926957285371467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2143566855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2929,6 +2947,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 2968984747262896080, guid: e076463502ca5f8449dd03ac0563863d,
+        type: 3}
+      propertyPath: itemCounterUI.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968984747262896080, guid: e076463502ca5f8449dd03ac0563863d,
+        type: 3}
+      propertyPath: itemCounterUI.Array.data[0]
+      value: 
+      objectReference: {fileID: 1993713604}
+    - target: {fileID: 2968984747262896080, guid: e076463502ca5f8449dd03ac0563863d,
+        type: 3}
+      propertyPath: itemCounterUI.Array.data[1]
+      value: 
+      objectReference: {fileID: 1628653563}
+    - target: {fileID: 2968984747262896080, guid: e076463502ca5f8449dd03ac0563863d,
+        type: 3}
+      propertyPath: itemCounterUI.Array.data[2]
+      value: 
+      objectReference: {fileID: 344436459}
     - target: {fileID: 6278668723709867072, guid: e076463502ca5f8449dd03ac0563863d,
         type: 3}
       propertyPath: m_RootOrder
