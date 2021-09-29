@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 4907661145591952863}
   - component: {fileID: 5214474087169022210}
   m_Layer: 0
-  m_Name: Sick
+  m_Name: HeartEyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1163,7 +1163,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dabb11cba5d8a53438854815ac985b06, type: 2}
+  - {fileID: 2100000, guid: 7fba9051cd57a324a8c6631075c8ff21, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1258,7 +1258,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f0cdc0fa940b6fe4f918a903aa34ec6a, type: 2}
+  - {fileID: 2100000, guid: 0a8d30408476ee940b8c1045fbd0de55, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

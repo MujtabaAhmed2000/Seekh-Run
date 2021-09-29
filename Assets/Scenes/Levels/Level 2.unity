@@ -680,6 +680,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2361114656901904237, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1037.9373
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361114656901904237, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 86.2166
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361114656901904237, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361114656901904237, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 87.86066
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386327261246113817, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4240085787483737580, guid: fb0e892c4cdbf3849879ce2512f80891,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -695,6 +720,46 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameController, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4459418461561240295, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459418461561240295, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459418461561240295, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459418461561240295, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 177.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459418461561240295, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 177.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459418461561240295, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345201552803413871, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071545913299056639, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 8814247692459641339, guid: fb0e892c4cdbf3849879ce2512f80891,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -709,6 +774,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814247692658951456, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -23.399902
       objectReference: {fileID: 0}
     - target: {fileID: 8814247692680612951, guid: fb0e892c4cdbf3849879ce2512f80891,
         type: 3}
@@ -789,6 +859,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814247693851200944, guid: fb0e892c4cdbf3849879ce2512f80891,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb0e892c4cdbf3849879ce2512f80891, type: 3}
@@ -1100,6 +1175,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skewer Stand
       objectReference: {fileID: 0}
+    - target: {fileID: 2627893188495524048, guid: b760ded9407bb914c80cef6dc8fba841,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2849618663977435012, guid: b760ded9407bb914c80cef6dc8fba841,
         type: 3}
       propertyPath: m_RootOrder
@@ -1153,6 +1233,11 @@ PrefabInstance:
     - target: {fileID: 2849618663977435012, guid: b760ded9407bb914c80cef6dc8fba841,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8577356336736849474, guid: b760ded9407bb914c80cef6dc8fba841,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
