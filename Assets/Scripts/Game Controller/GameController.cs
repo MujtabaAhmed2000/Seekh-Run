@@ -222,7 +222,28 @@ public class GameController : MonoBehaviour
                 {
                     if (food.Equals(counter.name))
                     {
-                        //INCREMENT COUNT BY 1
+                        TMP_Text text = counter.GetComponentInChildren<TMP_Text>();
+                        int currCount = int.Parse(text.text);
+                        text.text = currCount++.ToString();
+                    }
+                }
+            }
+        }
+    }
+
+    public void checkIfItemRemovedIsRequired(GameObject item)
+    {
+        foreach (String food in itemsInLevel)
+        {
+            if (food.StartsWith(item.name))
+            {
+                foreach (GameObject counter in itemCounterUI)
+                {
+                    if (food.Equals(counter.name))
+                    {
+                        TMP_Text text = counter.GetComponentInChildren<TMP_Text>();
+                        int currCount = int.Parse(text.text);
+                        text.text = currCount--.ToString();
                     }
                 }
             }

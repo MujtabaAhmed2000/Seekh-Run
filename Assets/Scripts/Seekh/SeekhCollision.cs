@@ -9,8 +9,6 @@ public class SeekhCollision : MonoBehaviour
     [SerializeField] List<GameObject> itemPositions;
     [SerializeField] SeekhMovement seekhMovement;
     [SerializeField] SeekhRotation seekhRotation;
-    float zPositionOnSeekh = 3f;
-    float gapBetweenItems = 1.5f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,24 +16,30 @@ public class SeekhCollision : MonoBehaviour
         {
             int position = seekhInfo.getNumberOfItemsOnSeekh();
 
+            if(position == 10)
+            {
+                return;
+            }
+
             other.gameObject.GetComponent<FoodInfo>().disableCollider();
 
             seekhInfo.addItemOnSeekh(other.gameObject);
 
-            other.gameObject.GetComponent<FoodCollect>().attachToSkewer(zPositionOnSeekh, itemPositions[position].transform);
-
-            zPositionOnSeekh -= gapBetweenItems;
+            other.gameObject.GetComponent<FoodCollect>().attachToSkewer(itemPositions[position].transform);
         }
         
         else if(other.gameObject.tag == "Wall")
         {
             shakeSeekh();
 
+            if(seekhInfo.getNumberOfItemsOnSeekh() == 0)
+            {
+                return;
+            }
+
             GameObject item = seekhInfo.removeTopItemOnSeekh();
             item.GetComponent<FoodCollect>().detachFromSkewer();
             item.GetComponent<FoodInfo>().flingItemUp();
-
-            zPositionOnSeekh += gapBetweenItems;
         }
 
         else if(other.gameObject.tag == "Finish")

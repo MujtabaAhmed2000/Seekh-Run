@@ -21,12 +21,13 @@ public class SeekhInfo : MonoBehaviour
     public void addItemOnSeekh(GameObject item)
     {
         itemsOnSeekh.Add(item);
-        gameController.checkIfItemAddedIsRequired(item);
+        //gameController.checkIfItemAddedIsRequired(item);
     }
 
     public void RemoveItemOnSeekh(GameObject item)
     {
         itemsOnSeekh.Remove(item);
+        //gameController.checkIfItemRemovedIsRequired(item);
     }
 
     public int getNumberOfItemsOnSeekh()

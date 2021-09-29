@@ -20,7 +20,7 @@ public class FoodCollect : MonoBehaviour
         FoodPickUp = GetComponent<AudioSource>();
 
     }
-    public void attachToSkewer(float zOffset, Transform skewer)
+    public void attachToSkewer(Transform skewer)
     {
         //VIBRATION
         Handheld.Vibrate();
@@ -36,12 +36,6 @@ public class FoodCollect : MonoBehaviour
         
         //MOVE THE ITEM
         StartCoroutine(moveItem(skewer));
-        //Vector3 offset = new Vector3(0, 0, 2.5f);
-
-        //transform.DOMove(skewer.position + offset, animDuration).SetEase(Ease.OutBounce);
-
-        //TO MAKE SURE IT ALIGNS EXACTLY ONTO THE POISITION
-        //Invoke("alignItem", animDuration + 0.1f);
 
         transform.DOShakeScale(1f);
     }
@@ -78,18 +72,6 @@ public class FoodCollect : MonoBehaviour
         float animTime = animDuration / frequency;
         for(int i = 0; i < frequency; i++)
         {
-            //float xPos = (balancedPosition.x + transform.position.x) / 2;
-            ////zPos += skewer.position.z;
-
-            ////Vector3 mid = (balancedPosition + transform.position) / 2;
-
-            //Debug.Log("PASS:" + i);
-            //Debug.Log("CURRENT POSITION" + transform.position);
-            //Debug.Log("BALANCED POSITION" + balancedPosition);
-            //Debug.Log("SKEWER POSITION: " + skewer.position);
-            //Debug.Log("X:" + xPos);
-            ////Debug.Log("TWEEN POSITION:" + mid);
-
             transform.DOMoveX(balancedPosition.x, animTime).SetEase(Ease.OutBounce);
 
             yield return new WaitForSeconds(animTime);
