@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class SliderMovement : MonoBehaviour
 {
-    [SerializeField] Transform slider;
+    [SerializeField] GameObject sliderObject;
+    [SerializeField] RectTransform slider;
 
     bool stop = false;
-    float speed = 2.5f;
+    float speed = 5f;
 
-    // Update is called once per frame
     void Update()
     {
         if (!stop)
         {
-            slider.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
-            if(slider.position.x > 3.6)
+            slider.Translate(new Vector3(speed, 0, 0));
+            if(slider.anchoredPosition.x > 480)
             {
-                stop = true;
+                speed *= -1;
+            }
+            if(slider.anchoredPosition.x < -480)
+            {
+                speed *= -1;
             }
         }
     }
@@ -26,27 +30,23 @@ public class SliderMovement : MonoBehaviour
     {
         stop = true;
 
-        if (slider.position.x < -1.4)
+        if(slider.anchoredPosition.x < -365 || slider.anchoredPosition.x > 365)
         {
-            return "Raw";
+            return "Burnt";
         }
-        else if(slider.position.x < 1.49)
-        {
-            return "Cooked";
-        }
-        else if(slider.position.x < 3.5)
+        else if(slider.anchoredPosition.x < -110 || slider.anchoredPosition.x > 145)
         {
             return "Smoke";
         }
         else
         {
-            return "Burnt";
+            return "Cooked";
         }
     }
 
     public void setEnabled(bool value)
     {
-        gameObject.SetActive(value);
+        sliderObject.SetActive(value);
     }
 
 }
