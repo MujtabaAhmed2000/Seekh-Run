@@ -11,6 +11,9 @@ TagManager:
   - LeftWall
   - RightWall
   - Stove
+  - SliderRed
+  - SliderYellow
+  - SliderGreen
   layers:
   - Default
   - TransparentFX

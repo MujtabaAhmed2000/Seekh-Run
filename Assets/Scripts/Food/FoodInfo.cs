@@ -10,7 +10,7 @@ public class FoodInfo : MonoBehaviour
     bool isPickedUp = false;
     bool isFlung = false;
     float scaleDuration = 0.5f;
-    float scaleIncrease = 1f;
+    float scaleIncrease = 0.15f;
     float currentScale;
 
     void Start()
@@ -18,7 +18,7 @@ public class FoodInfo : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         collider = GetComponent<BoxCollider>();
         currentScale = transform.localScale.x;
-        //makeBig();
+        makeBig();
     }
 
     // Update is called once per frame

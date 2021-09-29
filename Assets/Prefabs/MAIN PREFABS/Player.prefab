@@ -25,12 +25,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765053025798402430}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0, z: 6.23}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 1.6399999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7046267081270248080}
-  m_RootOrder: 1
+  m_Father: {fileID: 1095185299881397092}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &4840690100920273361
 ParticleSystem:
@@ -4856,12 +4856,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251437552345244183}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.24, z: 5.84}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.24000001, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7046267081270248080}
-  m_RootOrder: 3
+  m_Father: {fileID: 1095185299881397092}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &4510306023783097175
 ParticleSystem:
@@ -9726,12 +9726,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4780823659773090589}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.28, z: 6.17}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.27999997, z: 1.5799999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7046267081270248080}
-  m_RootOrder: 4
+  m_Father: {fileID: 1095185299881397092}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &3373278654578947869
 ParticleSystem:
@@ -14408,7 +14408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &111187540257221066
 Transform:
   m_ObjectHideFlags: 0
@@ -14416,12 +14416,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5373313867344855508}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 6.21}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.6199999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7046267081270248080}
-  m_RootOrder: 2
+  m_Father: {fileID: 1095185299881397092}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &6679007198522137855
 ParticleSystem:
@@ -14431,14 +14431,14 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5373313867344855508}
   serializedVersion: 7
-  lengthInSec: 5
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 1
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -19150,10 +19150,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1095185299881397092}
-  - {fileID: 7501636013466341369}
-  - {fileID: 111187540257221066}
-  - {fileID: 5940100400206691096}
-  - {fileID: 806065067799158979}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19169,13 +19165,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cacef1087efd741b8e82b8b13e624d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  gameController: {fileID: 0}
+  cameraFollow: {fileID: 0}
   finalSkewerPlaceholder: {fileID: 0}
+  speed: 15
   mitten: {fileID: 8444336514754778805}
   skewer: {fileID: 1095185299881397092}
-  cameraFollow: {fileID: 0}
-  uiSlider: {fileID: 0}
-  uiHand: {fileID: 0}
 --- !u!114 &-6725787191350395172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19188,7 +19183,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9a97d1cc5b0c374ba8647898950168a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameController: {fileID: 0}
   itemsOnSeekh: []
+  cooked: {fileID: 5373313867344855508}
+  smoke: {fileID: 765053025798402430}
+  burnt: {fileID: 1251437552345244183}
+  raw: {fileID: 4780823659773090589}
 --- !u!1 &6903950834519717729
 GameObject:
   m_ObjectHideFlags: 0
@@ -19352,6 +19352,10 @@ Transform:
   - {fileID: 1964898857992573650}
   - {fileID: 6449653978037072971}
   - {fileID: 1038092061570354544}
+  - {fileID: 7501636013466341369}
+  - {fileID: 111187540257221066}
+  - {fileID: 5940100400206691096}
+  - {fileID: 806065067799158979}
   m_Father: {fileID: 7046267081270248080}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
